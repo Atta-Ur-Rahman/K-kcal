@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.WelcomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/logo_widith"
+            android:layout_height="@dimen/logo_height"
+            android:layout_marginTop="@dimen/logo_margin_top"
+            android:src="@mipmap/logo2" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="Welcome"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:gravity="center"
+            android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_n_adipiscing_elit_set_do_eiusmod_tempor_n_incididunt_ut_labore_et_dolore_magna_n_aliqua"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.5"
+        android:background="@mipmap/img_login"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="40sp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="75sp"
+            android:layout_marginLeft="@dimen/margin_50sp"
+            android:layout_marginRight="@dimen/margin_50sp"
+            android:background="@mipmap/btn1"
+            android:paddingBottom="15sp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="75sp"
+            android:layout_marginLeft="@dimen/margin_50sp"
+            android:layout_marginRight="@dimen/margin_50sp"
+            android:background="@mipmap/btn2"
+            android:paddingBottom="15sp"
+            android:text="Sign up"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
