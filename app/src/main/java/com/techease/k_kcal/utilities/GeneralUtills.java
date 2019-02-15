@@ -1,5 +1,6 @@
 package com.techease.k_kcal.utilities;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,7 +13,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.techease.k_kcal.R;
+
+import java.util.List;
+
 public class GeneralUtills {
 
 
@@ -21,21 +30,6 @@ public class GeneralUtills {
     public static ImageView imageView;
     public static LinearLayout linearLayout;
     public static TextView textView;
-
-    public static SharedPreferences.Editor putValueInEditor(Context context) {
-        sharedPreferences = getSharedPreferences(context);
-        editor = sharedPreferences.edit();
-        return editor;
-    }
-
-    public static SharedPreferences getSharedPreferences(Context context) {
-        //sharedPreferences = context.getSharedPreferences(Configuration.MY_PREF, 0);
-        return context.getSharedPreferences(Configurations.MY_PREF, 0);
-    }
-
-    private static class Configurations {
-        public static final String MY_PREF = null;
-    }
 
 
     public static Fragment connectFragment(Context context, Fragment fragment) {
@@ -48,20 +42,60 @@ public class GeneralUtills {
         return fragment;
     }
 
-
-    public static ImageView imageViewDeclaration(int buttonID, View view) {
-        imageView = view.findViewById(buttonID);
-        return imageView;
+    public static SharedPreferences.Editor putStringValueInEditor(Context context, String key, String value) {
+        sharedPreferences = getSharedPreferences(context);
+        editor = sharedPreferences.edit();
+        editor.putString(key, value).commit();
+        return editor;
     }
 
-    public static TextView textViewDeclaration(int textViewID, View view) {
-        textView = view.findViewById(textViewID);
-        return textView;
+    public static SharedPreferences.Editor putIntegerValueInEditor(Context context, String key, int value) {
+        sharedPreferences = getSharedPreferences(context);
+        editor = sharedPreferences.edit();
+        editor.putInt(key, value).commit();
+        return editor;
     }
 
-    public static LinearLayout linearLayoutDeclaration(int linearLayoutID, View view) {
-        linearLayout = view.findViewById(linearLayoutID);
-        return linearLayout;
+    public static SharedPreferences.Editor putBooleanValueInEditor(Context context, String key, boolean value) {
+        sharedPreferences = getSharedPreferences(context);
+        editor = sharedPreferences.edit();
+        editor.putBoolean(key, value).commit();
+        return editor;
     }
+
+
+
+    public static SharedPreferences getSharedPreferences(Context context) {
+        return context.getSharedPreferences(Config.MY_PREF, 0);
+    }
+
+    public static String getApiToken(Context context){
+        return getSharedPreferences(context).getString("api_token","");
+    }
+
+    public static String getUserID(Context context){
+        return getSharedPreferences(context).getString("userID","");
+    }
+
+
+    public static void grantPermission(Activity  context){
+        Dexter.withActivity(context)
+                .withPermissions(
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                ).withListener(new MultiplePermissionsListener() {
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport report) {
+
+            }
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+
+            }
+
+        }).check();
+    }
+
 
 }

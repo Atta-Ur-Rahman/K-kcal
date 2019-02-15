@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorGray"
     android:orientation="vertical"
-    tools:context=".ui.fragment.Sign_up_Fragment">
+    tools:context=".ui.fragment.SignUpFragment">
 
 
     <LinearLayout
@@ -68,6 +68,7 @@
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/btn_signup_email"
             android:layout_width="match_parent"
             android:layout_height="75sp"
             android:layout_marginLeft="@dimen/margin_50sp"

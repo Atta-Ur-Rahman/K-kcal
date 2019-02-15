@@ -12,12 +12,7 @@ import com.techease.k_kcal.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NavegateFragment extends Fragment {
-
-
-    public NavegateFragment() {
-        // Required empty public constructor
-    }
+public class NavigateFragment extends Fragment {
 
 
     @Override

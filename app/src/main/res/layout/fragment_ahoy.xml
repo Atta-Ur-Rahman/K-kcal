@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorGray"
     android:orientation="vertical"
-    tools:context=".ui.fragment.AhoyFragment">
+    tools:context=".ui.fragment.RegistrationFragment">
 
 
     <LinearLayout
@@ -46,6 +46,7 @@
 
 
             <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/iv_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@mipmap/upload_photo"
@@ -76,6 +77,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Full Name"
@@ -100,6 +102,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email Address"
@@ -123,6 +126,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone N0."
@@ -146,6 +150,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -169,6 +174,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm password"
@@ -236,12 +242,14 @@
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/darker_gray" />
 
-            <TextView
+            <Button
+                android:id="@+id/btn_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="100sp"
                 android:text="Sign Up"
+                android:background="@null"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="18sp"
                 android:textStyle="bold" />
