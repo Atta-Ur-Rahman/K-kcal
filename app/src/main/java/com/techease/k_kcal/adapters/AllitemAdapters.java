@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
+import com.techease.k_kcal.ui.fragment.DetailFragment;
+import com.techease.k_kcal.utilities.GeneralUtills;
 
 import java.util.List;
 
@@ -54,6 +56,15 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
         viewHolder.tvItemPublish.setText(model.getPublishedAt());
         viewHolder.tvItemLocation.setText(model.getLocation());
 
+        viewHolder.ivDetailArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.putStringValueInEditor(context,"latitude",model.getLatitude());
+                GeneralUtills.putStringValueInEditor(context,"longitude",model.getLongitude());
+                GeneralUtills.connectFragment(context,new DetailFragment());
+            }
+        });
+
 
     }
 
@@ -63,7 +74,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivItem;
+        ImageView ivItem,ivDetailArrow;
         TextView tvItemName,tvItemLocation,tvItemPublish;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -72,6 +83,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
             ivItem = itemView.findViewById(R.id.iv_item);
             tvItemLocation = itemView.findViewById(R.id.tv_location);
             tvItemPublish = itemView.findViewById(R.id.tv_published);
+            ivDetailArrow = itemView.findViewById(R.id.iv_detail_arrow);
 
 
         }

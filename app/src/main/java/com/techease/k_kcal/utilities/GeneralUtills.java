@@ -73,8 +73,16 @@ public class GeneralUtills {
         return getSharedPreferences(context).getString("api_token","");
     }
 
-    public static String getUserID(Context context){
-        return getSharedPreferences(context).getString("userID","");
+    public static String getForgotEmail(Context context){
+        return getSharedPreferences(context).getString("forgot_email","");
+    }
+
+    public static String getLat(Context context){
+        return getSharedPreferences(context).getString("latitude","");
+    }
+
+    public static String getLng(Context context){
+        return getSharedPreferences(context).getString("longitude","");
     }
 
 

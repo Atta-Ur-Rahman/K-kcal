@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DetailFragment">
+
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@id/botoom">
+
+       <com.google.android.gms.maps.MapView
+           android:id="@+id/mapView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:apiKey="AIzaSyD0u3ThIGMVgW0KS0t8shkm9Qr_OVwrRiw">
+       </com.google.android.gms.maps.MapView>
+
+   </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/botoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="+51 kcal"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="38 more items" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="+3 min"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="49 more items" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/btn2"
+            android:gravity="center"
+            android:paddingBottom="15sp"
+            android:text="Navegate"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20sp"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

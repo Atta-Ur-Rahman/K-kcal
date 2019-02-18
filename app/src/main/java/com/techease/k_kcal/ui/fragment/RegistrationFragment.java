@@ -23,11 +23,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.signupdatamodels.SignUpResponseModel;
@@ -56,9 +51,6 @@ import retrofit2.Response;
 
 import static android.app.Activity.RESULT_OK;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class RegistrationFragment extends Fragment {
     AlertDialog alertDialog;
     View view;
@@ -106,11 +98,11 @@ public class RegistrationFragment extends Fragment {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if(validate()){
-                   alertDialog = AlertUtils.createProgressDialog(getActivity());
-                   alertDialog.show();
-                   apiCallRegistration();
-               }
+                if(validate()){
+                    alertDialog = AlertUtils.createProgressDialog(getActivity());
+                    alertDialog.show();
+                    apiCallRegistration();
+                }
             }
         });
     }
@@ -171,8 +163,8 @@ public class RegistrationFragment extends Fragment {
                 if (response.body() == null) {
                     Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
                 } else if (response.body().getStatus()) {
-                  GeneralUtills.putStringValueInEditor(getActivity(),"api_token",response.body().getData().getToken());
-                  GeneralUtills.connectFragment(getActivity(),new VerifyCodeFragment());
+                    GeneralUtills.putStringValueInEditor(getActivity(),"api_token",response.body().getData().getToken());
+                    GeneralUtills.connectFragment(getActivity(),new VerifyCodeFragment());
                 } else {
                     Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
                 }

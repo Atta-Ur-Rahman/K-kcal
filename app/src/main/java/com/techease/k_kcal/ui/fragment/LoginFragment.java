@@ -1,8 +1,16 @@
 package com.techease.k_kcal.ui.fragment;
 
 
+import android.Manifest;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -16,6 +24,7 @@ import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.networking.ApiClient;
 import com.techease.k_kcal.networking.ApiInterface;
+import com.techease.k_kcal.ui.fragment.forgotpassword.ForgotPasswordFragment;
 import com.techease.k_kcal.utilities.AlertUtils;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
@@ -57,6 +66,10 @@ public class LoginFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
 
+        Toast.makeText(getActivity(), GeneralUtills.getLat(getActivity()), Toast.LENGTH_SHORT).show();
+
+
+
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,11 +87,18 @@ public class LoginFragment extends Fragment {
                 GeneralUtills.connectFragment(getActivity(), new SignUpFragment());
             }
         });
+
+        tvForgotPaswword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.connectFragment(getActivity(),new ForgotPasswordFragment());
+            }
+        });
     }
 
     private void userLogin() {
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, "33.3330", "44.440");
+        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, GeneralUtills.getLat(getActivity()),GeneralUtills.getLng(getActivity()));
         userLogin.enqueue(new Callback<LoginResponseModel>() {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {

@@ -1,5 +1,8 @@
 package com.techease.k_kcal.networking;
 
+import com.techease.k_kcal.models.forgotDataModels.ChangePasswordModel;
+import com.techease.k_kcal.models.forgotDataModels.ForgotPasswordModel;
+import com.techease.k_kcal.models.forgotDataModels.VerifyCodeResponseModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResponseModel;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.resendCodeDataModel.ResendCodeModel;
@@ -52,5 +55,20 @@ public interface ApiInterface {
 
     @GET("getItems")
     Call<ItemResponseModel> getItems();
+
+
+    @FormUrlEncoded
+    @POST("resetPassword")
+    Call<ForgotPasswordModel> resetPassword(@Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("resetPasswordVerify")
+    Call<VerifyCodeResponseModel> verifyPasswordCode(@Field("code") String code,
+                                                     @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("changePassword")
+    Call<ChangePasswordModel> changePassword(@Field("newPassword") String code,
+                                             @Field("confirmPassword") String email);
 
 }

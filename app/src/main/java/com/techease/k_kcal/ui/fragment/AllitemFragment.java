@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.techease.k_kcal.R;
@@ -37,6 +38,8 @@ public class AllitemFragment extends Fragment {
     android.support.v7.app.AlertDialog alertDialog;
     @BindView(R.id.rv_all_items)
     RecyclerView rvItems;
+    @BindView(R.id.iv_profile)
+    ImageView ivProfile;
     AllitemAdapters allitemAdapters;
     List<ItemDetailModel> itemDataModelList;
     View view;
@@ -62,6 +65,13 @@ public class AllitemFragment extends Fragment {
         alertDialog = AlertUtils.createProgressDialog(getActivity());
         alertDialog.show();
         apiCallAllItems();
+
+        ivProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.connectFragment(getActivity(),new ProfileFragment());
+            }
+        });
 
     }
 

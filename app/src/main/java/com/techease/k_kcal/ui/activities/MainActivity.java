@@ -4,9 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.techease.k_kcal.R;
-import com.techease.k_kcal.ui.fragment.LoginFragment;
-import com.techease.k_kcal.ui.fragment.NavigateFragment;
-import com.techease.k_kcal.ui.fragment.VerifyCodeFragment;
+import com.techease.k_kcal.ui.fragment.WelcomeFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        GeneralUtills.withOutBackStackConnectFragment(this,new LoginFragment());
+        GeneralUtills.withOutBackStackConnectFragment(this,new WelcomeFragment());
     }
 
 }

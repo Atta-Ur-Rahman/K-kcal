@@ -52,6 +52,7 @@
         android:paddingTop="40sp">
 
         <Button
+            android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="75sp"
             android:layout_marginLeft="@dimen/margin_50sp"
@@ -60,10 +61,11 @@
             android:paddingBottom="15sp"
             android:text="Login"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/title_text_size" />
+            android:textSize="@dimen/text_size" />
 
 
         <Button
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="75sp"
             android:layout_marginLeft="@dimen/margin_50sp"
