@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGray"
-    tools:context=".ui.fragment.AboutYouFragment">
+    tools:context=".ui.fragment.AboutUserFragment">
 
 
     <LinearLayout
@@ -47,18 +47,51 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20sp"
-                android:scaleType="fitXY"
-                android:src="@mipmap/man" />
+                android:layout_height="wrap_content">
 
-            <ImageView
+                <ImageView
+                    android:id="@+id/iv_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20sp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/man" />
+                <ImageView
+                    android:id="@+id/iv_male_check"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/check" />
+
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@mipmap/women" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/women" />
+
+                <ImageView
+                    android:id="@+id/iv_female_check"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/check" />
+
+            </FrameLayout>
+
+
         </LinearLayout>
 
 
@@ -72,6 +105,7 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Age"
@@ -120,7 +154,7 @@
                 app:hintEnabled="false">
 
                 <EditText
-                    android:id="@+id/et_email_address"
+                    android:id="@+id/et_height"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="Height"
@@ -169,6 +203,7 @@
                 app:hintEnabled="false">
 
                 <EditText
+                    android:id="@+id/et_weight"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="Weight"
@@ -183,10 +218,58 @@
 
         </RelativeLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/colorAccent"
+            android:theme="@style/Theme.AppCompat"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/et_profession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profession"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:paddingBottom="20sp"
+                android:textColor="@android:color/darker_gray"
+                android:textColorHint="@android:color/darker_gray"
+                android:textCursorDrawable="@drawable/cursor_color"
+                app:backgroundTint="@android:color/darker_gray" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/colorAccent"
+            android:theme="@style/Theme.AppCompat"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/et_life_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="LifeStyle"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:paddingBottom="20sp"
+                android:textColor="@android:color/darker_gray"
+                android:textColorHint="@android:color/darker_gray"
+                android:textCursorDrawable="@drawable/cursor_color"
+                app:backgroundTint="@android:color/darker_gray" />
+
+        </android.support.design.widget.TextInputLayout>
+
     </LinearLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/ll_parent_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -199,41 +282,40 @@
             android:layout_height="1dp"
             android:background="@android:color/darker_gray" />
 
-        <LinearLayout
-            android:id="@+id/ll_login"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="bottom">
+
 
             <ImageView
+                android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="30sp"
-                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20sp"
                 android:alpha="0.5"
+                android:layout_centerVertical="true"
                 android:src="@drawable/back" />
 
 
             <View
+                android:id="@+id/v"
                 android:layout_width="1dp"
                 android:layout_height="50sp"
+                android:layout_toRightOf="@id/back"
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/darker_gray" />
 
-            <TextView
-                android:id="@+id/tv_verify"
+            <Button
+                android:id="@+id/btn_continue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                android:gravity="center_horizontal"
                 android:text="Continue"
                 android:textAllCaps="false"
+                android:layout_toRightOf="@+id/v"
+                android:background="@null"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

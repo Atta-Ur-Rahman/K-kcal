@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGray"
-    tools:context=".ui.fragment.LikeTravelFragment">
+    tools:context=".ui.fragment.TravelFragment">
 
 
     <LinearLayout
@@ -64,10 +64,12 @@
 
 
             <FrameLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/iv_car"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/rectangle_copy" />
@@ -96,6 +98,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/iv_walk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/rectangle" />
@@ -182,15 +185,14 @@
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/darker_gray" />
 
-            <TextView
-                android:id="@+id/tv_verify"
+            <Button
+                android:id="@+id/btn_continue_travel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:gravity="center_horizontal"
                 android:text="Continue"
+                android:background="@null"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="18sp"

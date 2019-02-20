@@ -1,12 +1,15 @@
 package com.techease.k_kcal.ui.fragment;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,6 +17,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.techease.k_kcal.R;
@@ -32,10 +37,13 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
 
     @BindView(R.id.mapView)
     MapView mapView;
+    @BindView(R.id.btn_navigate)
+    Button btnNavigate;
 
     GoogleMap map;
     View view;
     Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,20 +64,28 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
         } else {
             Toast.makeText(getActivity(), "No Internet Connection", Toast.LENGTH_SHORT).show();
         }
+
+        btnNavigate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps.mytracks?saddr=33.983970,71.428352&daddr=33.555749,72.832427"));
+                startActivity(intent);
+            }
+        });
         return view;
     }
-
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        Log.d("lat",GeneralUtills.getLat(getActivity()));
-        Log.d("lng",GeneralUtills.getLng(getActivity()));
-        LatLng sydney = new LatLng(Double.parseDouble(GeneralUtills.getLat(getActivity())), Double.parseDouble(GeneralUtills.getLng(getActivity())));
+        BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.foot_dark);
+        LatLng sydney = new LatLng(33.986381, 71.438575);
         map.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
+                .title("Marker in Peshwar")).setIcon(icon);
         map.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.986381, 71.438575), 12.0f));
     }
 
     @Override

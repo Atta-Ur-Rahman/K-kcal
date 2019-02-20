@@ -28,6 +28,8 @@ import com.techease.k_kcal.ui.fragment.forgotpassword.ForgotPasswordFragment;
 import com.techease.k_kcal.utilities.AlertUtils;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
+import org.json.JSONObject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -104,9 +106,16 @@ public class LoginFragment extends Fragment {
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
                 alertDialog.dismiss();
                 if (response.body() == null) {
-                    Toast.makeText(getActivity(), "something went wrong", Toast.LENGTH_SHORT).show();
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
                 } else if (response.body().getStatus()) {
                     String userID = response.body().getData().getUser().getId().toString();
+                    GeneralUtills.putBooleanValueInEditor(getContext(),"isLogin",true);
                     GeneralUtills.putStringValueInEditor(getActivity(), "userID", userID);
                     GeneralUtills.putStringValueInEditor(getActivity(), "api_token", response.body().getData().getUser().getToken());
                     GeneralUtills.connectFragment(getActivity(), new AllitemFragment());
@@ -125,8 +134,8 @@ public class LoginFragment extends Fragment {
     private boolean validate() {
         valid = true;
 
-        strEmail = etEmail.getText().toString();
-        strPassword = etPassword.getText().toString();
+        strEmail = etEmail.getText().toString().trim();
+        strPassword = etPassword.getText().toString().trim();
 
         if (strEmail.isEmpty()) {
             etEmail.setError("enter a valid email address");

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.utilities.GeneralUtills;
@@ -21,6 +22,8 @@ public class SignUpFragment extends Fragment {
     View view;
     @BindView(R.id.btn_signup_email)
     Button btnSignUpWithEmail;
+    @BindView(R.id.tv_already_login)
+    TextView tvAlreadyLogin;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +40,13 @@ public class SignUpFragment extends Fragment {
             @Override
             public void onClick(View v) {
              GeneralUtills.connectFragment(getActivity(),new RegistrationFragment());
+            }
+        });
+
+        tvAlreadyLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.connectFragment(getContext(),new LoginFragment());
             }
         });
     }

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
+import com.techease.k_kcal.ui.fragment.AllitemFragment;
 import com.techease.k_kcal.ui.fragment.DetailFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
@@ -51,17 +52,20 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     public void onBindViewHolder(@NonNull final MyViewHolder viewHolder, final int position) {
         final ItemDetailModel model = itemDetailModels.get(position);
 
+        AllitemFragment.tvTotalitems.setText(String.valueOf(position + 1));
         Glide.with(context).load(model.getImageLink()).into(viewHolder.ivItem);
         viewHolder.tvItemName.setText(model.getName());
         viewHolder.tvItemPublish.setText(model.getPublishedAt());
         viewHolder.tvItemLocation.setText(model.getLocation());
 
+
+
         viewHolder.ivDetailArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtills.putStringValueInEditor(context,"latitude",model.getLatitude());
-                GeneralUtills.putStringValueInEditor(context,"longitude",model.getLongitude());
-                GeneralUtills.connectFragment(context,new DetailFragment());
+                GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
+                GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
+                GeneralUtills.connectFragment(context, new DetailFragment());
             }
         });
 
@@ -74,8 +78,8 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivItem,ivDetailArrow;
-        TextView tvItemName,tvItemLocation,tvItemPublish;
+        ImageView ivItem, ivDetailArrow;
+        TextView tvItemName, tvItemLocation, tvItemPublish;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

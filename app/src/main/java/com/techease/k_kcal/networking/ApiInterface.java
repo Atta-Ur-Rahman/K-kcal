@@ -1,12 +1,18 @@
 package com.techease.k_kcal.networking;
 
+import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.forgotDataModels.ChangePasswordModel;
 import com.techease.k_kcal.models.forgotDataModels.ForgotPasswordModel;
 import com.techease.k_kcal.models.forgotDataModels.VerifyCodeResponseModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResponseModel;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
+import com.techease.k_kcal.models.moreinfoDataModel.MoreInfoProfileModel;
+import com.techease.k_kcal.models.profileDataModels.ProfileResponseModel;
+import com.techease.k_kcal.models.profileUpdateDataModel.ProfileImageResponseModel;
+import com.techease.k_kcal.models.profileUpdateDataModel.ProfileUpdateResponseModel;
 import com.techease.k_kcal.models.resendCodeDataModel.ResendCodeModel;
 import com.techease.k_kcal.models.signupdatamodels.SignUpResponseModel;
+import com.techease.k_kcal.models.travelDataModel.TravelReponseModel;
 import com.techease.k_kcal.models.verifiyDataModels.VerifyResponseModel;
 
 import okhttp3.MultipartBody;
@@ -15,10 +21,11 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by eapple on 29/08/2018.
@@ -56,6 +63,25 @@ public interface ApiInterface {
     @GET("getItems")
     Call<ItemResponseModel> getItems();
 
+    @GET("userProfile")
+    Call<ProfileResponseModel> getUserProfile();
+
+    @FormUrlEncoded
+    @POST("updateProfile")
+    Call<ProfileUpdateResponseModel> updateProfile(@Field("name") String name,
+                                                   @Field("phoneNumber") String number,
+                                                   @Field("email") String email);
+
+    @Multipart
+    @POST("updateProfilePicture")
+    Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
+                                                         @Part("profilePicture") RequestBody fileName);
+
+    @GET("getItems/search?")
+    Call<ItemResponseModel> getFiltersItems(@Query("category") String category,
+                                            @Query("price") String price,
+                                            @Query("location") String location);
+
 
     @FormUrlEncoded
     @POST("resetPassword")
@@ -70,5 +96,20 @@ public interface ApiInterface {
     @POST("changePassword")
     Call<ChangePasswordModel> changePassword(@Field("newPassword") String code,
                                              @Field("confirmPassword") String email);
+
+    @FormUrlEncoded
+    @POST("addMoreInfo")
+    Call<MoreInfoProfileModel> addMoreInfo(@Field("gender") String code,
+                                           @Field("age") String age,
+                                           @Field("height") String height,
+                                           @Field("weight") String weight,
+                                           @Field("profession") String profession,
+                                           @Field("lifeStyle") String lifeStyle,
+                                           @Field("address") String address);
+
+    @FormUrlEncoded
+    @POST("addTravelInfo")
+    Call<TravelReponseModel> travelInfo(@Field("travel") String walk);
+
 
 }

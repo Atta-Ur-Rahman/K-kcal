@@ -85,6 +85,17 @@ public class GeneralUtills {
         return getSharedPreferences(context).getString("longitude","");
     }
 
+    public static String getName(Context context){
+        return getSharedPreferences(context).getString("name","");
+    }
+
+    public static String getEmail(Context context){
+        return getSharedPreferences(context).getString("email","");
+    }
+
+    public static boolean isLogin(Context context){
+        return getSharedPreferences(context).getBoolean("isLogin",false);
+    }
 
     public static void grantPermission(Activity  context){
         Dexter.withActivity(context)

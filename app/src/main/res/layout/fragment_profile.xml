@@ -19,14 +19,29 @@
             android:paddingLeft="10sp"
             android:paddingRight="10sp">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:text="Profile"
-                android:textColor="@color/text_title_orange"
-                android:textSize="@dimen/title_text_size"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_back_arrow"
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25sp"
+                    android:src="@drawable/left_arrow"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:text="Profile"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_title_orange"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
 
 
             <LinearLayout
@@ -45,7 +60,7 @@
 
 
                     <com.mikhaellopez.circularimageview.CircularImageView
-                        android:id="@+id/iv_profile"
+                        android:id="@+id/iv_user_profile"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@mipmap/upload_photo"
@@ -60,10 +75,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@+id/iv_profile"
+                        android:layout_toRightOf="@+id/iv_user_profile"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_user_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ll_profille_tv"
@@ -77,6 +93,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tv_user_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -94,8 +111,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20sp"
                         android:padding="20sp"
                         android:src="@mipmap/edit" />
 

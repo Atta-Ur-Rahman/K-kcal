@@ -32,6 +32,8 @@ import com.techease.k_kcal.ui.activities.MainActivity;
 import com.techease.k_kcal.utilities.AlertUtils;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -161,12 +163,15 @@ public class RegistrationFragment extends Fragment {
             public void onResponse(Call<SignUpResponseModel> call, Response<SignUpResponseModel> response) {
                 alertDialog.dismiss();
                 if (response.body() == null) {
-                    Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 } else if (response.body().getStatus()) {
                     GeneralUtills.putStringValueInEditor(getActivity(),"api_token",response.body().getData().getToken());
-                    GeneralUtills.connectFragment(getActivity(),new VerifyCodeFragment());
-                } else {
-                    Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
+                    GeneralUtills.withOutBackStackConnectFragment(getActivity(),new VerifyCodeFragment());
                 }
 
             }
@@ -190,8 +195,8 @@ public class RegistrationFragment extends Fragment {
         strPhone = etPhone.getText().toString();
         strPassword = etPassword.getText().toString();
         strConfirmPassword = etConfirmPassword.getText().toString();
-        strLatitude = "33.333";
-        strLongitude = "44.87987";
+        strLatitude = GeneralUtills.getLat(getActivity());
+        strLongitude = GeneralUtills.getLng(getActivity());
         strDeviceType = "Android";
 
         if(sourceFile==null){
@@ -264,7 +269,6 @@ public class RegistrationFragment extends Fragment {
             FileOutputStream fo;
             try {
                 sourceFile.createNewFile();
-                sourceFile = new Compressor(getActivity()).compressToFile(sourceFile);
                 fo = new FileOutputStream(sourceFile);
                 fo.write(bytes.toByteArray());
                 fo.close();

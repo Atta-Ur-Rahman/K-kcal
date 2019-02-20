@@ -121,7 +121,7 @@ public class VerifyCodeFragment extends Fragment {
                     }
                 } else if (response.body().getStatus()) {
                     Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    GeneralUtills.connectFragment(getActivity(), new LoginFragment());
+                    GeneralUtills.connectFragment(getActivity(), new AboutUserFragment());
                 }
             }
 

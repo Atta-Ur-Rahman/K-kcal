@@ -86,13 +86,14 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_navigate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@mipmap/btn2"
             android:gravity="center"
             android:paddingBottom="15sp"
-            android:text="Navegate"
+            android:text="Navigate"
             android:textColor="@android:color/white"
             android:layout_marginTop="20sp"
             android:textStyle="bold"
