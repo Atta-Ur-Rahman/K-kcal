@@ -103,8 +103,6 @@ public class VerifyCodeFragment extends Fragment {
     }
 
     private void apicallVerification() {
-        Toast.makeText(getActivity(), strToken, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getActivity(), strVerifycode, Toast.LENGTH_SHORT).show();
         ApiInterface services = ApiClient.getApiClient(strToken).create(ApiInterface.class);
         Call<VerifyResponseModel> userVerify = services.userVerification(strVerifycode);
         userVerify.enqueue(new Callback<VerifyResponseModel>() {
@@ -160,8 +158,6 @@ public class VerifyCodeFragment extends Fragment {
             }
         });
     }
-
-
 
 
     private TextWatcher genraltextWatcher = new TextWatcher() {

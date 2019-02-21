@@ -114,6 +114,7 @@ public class AboutUserFragment extends Fragment {
                     alertDialog.show();
                     apiCallUserInfo();
                 }
+
             }
         });
     }
@@ -129,6 +130,11 @@ public class AboutUserFragment extends Fragment {
                     try {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                        if (jObjError.getString("message").contains("Successfully")){
+                            GeneralUtills.connectFragment(getActivity(), new AllowFragment());
+                        }else {
+                            Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                        }
 
                     } catch (Exception e) {
                         Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();

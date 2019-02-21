@@ -39,7 +39,7 @@ public class AllowFragment extends Fragment {
         btnAllowAccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            GeneralUtills.withOutBackStackConnectFragment(getActivity(),new AllitemFragment());
             }
         });
 

@@ -68,10 +68,6 @@ public class LoginFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
 
-        Toast.makeText(getActivity(), GeneralUtills.getLat(getActivity()), Toast.LENGTH_SHORT).show();
-
-
-
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
