@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="600sp"
+    android:layout_height="500sp"
     android:background="@color/colorGray"
     android:orientation="vertical"
     android:padding="10sp"
@@ -52,15 +52,15 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_marginTop="10sp"
-        android:background="@drawable/round_corner"
-        android:gravity="center_vertical"
-        android:paddingLeft="15sp"
-        android:text="Location"
-        android:textSize="@dimen/text_size" />
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50sp"-->
+        <!--android:layout_marginTop="10sp"-->
+        <!--android:background="@drawable/round_corner"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingLeft="15sp"-->
+        <!--android:text="Location"-->
+        <!--android:textSize="@dimen/text_size" />-->
 
 
     <RelativeLayout
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="20 Miles"
+            android:text="10 Miles"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size"
             android:textStyle="bold" />
@@ -117,8 +117,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
         android:backgroundTint="@color/text_title_orange"
-        android:max="15"
-        android:progress="9"
+        android:max="25"
+        android:progress="10"
         android:thumb="@drawable/seekbar_thum_shap" />
 
 
@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="$ 40"
+            android:text="$ 10"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size"
             android:textStyle="bold" />
@@ -155,8 +155,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
         android:backgroundTint="@color/text_title_orange"
-        android:max="15"
-        android:progress="9"
+        android:max="25"
+        android:progress="10"
         android:thumb="@drawable/seekbar_thum_shap" />
 
 

@@ -85,6 +85,14 @@ public class GeneralUtills {
         return getSharedPreferences(context).getString("longitude","");
     }
 
+    public static String latitude(Context context){
+        return getSharedPreferences(context).getString("resturant_latitude","");
+    }
+
+    public static String longitude(Context context){
+        return getSharedPreferences(context).getString("resturant_longitude","");
+    }
+
     public static String getName(Context context){
         return getSharedPreferences(context).getString("name","");
     }
@@ -95,6 +103,22 @@ public class GeneralUtills {
 
     public static boolean isLogin(Context context){
         return getSharedPreferences(context).getBoolean("isLogin",false);
+    }
+
+    public static String getLocation(Context context){
+        return getSharedPreferences(context).getString("location","");
+    }
+
+    public static String getItemName(Context context){
+        return getSharedPreferences(context).getString("item_name","");
+    }
+
+    public static String getPublished(Context context){
+        return getSharedPreferences(context).getString("published","");
+    }
+
+    public static String getImageLink(Context context){
+        return getSharedPreferences(context).getString("item_image","");
     }
 
     public static void grantPermission(Activity  context){

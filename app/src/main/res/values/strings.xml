@@ -9,7 +9,7 @@
     <string name="already_onboar_login">Already onboard? <font color="red"><u><b>Login</b></u></font></string>
     <string name="upload_profile_picture">Upload \nprofile picture</string>
     <string name="by_click_signup_you_ll_agree_with_our_terms_amp_condition_and_pricay_poilcy">By click signup you\'ll agree with our\nTerms &amp; Condition and Pricay Poilcy</string>
-    <string name="resend_code_text">Resend Confirmation Code in</string>
+    <string name="resend_code_text">Resend Confirmation Code</string>
     <string name="_1_08">(1:8)</string>
     <string name="verify">Verify</string>
     <string name="verify_text">We have sent you the code on the number you provided, please verify yourself.</string>

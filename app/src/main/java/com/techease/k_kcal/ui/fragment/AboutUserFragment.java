@@ -131,7 +131,7 @@ public class AboutUserFragment extends Fragment {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
                         if (jObjError.getString("message").contains("Successfully")){
-                            GeneralUtills.connectFragment(getActivity(), new AllowFragment());
+                            GeneralUtills.connectFragment(getActivity(), new TravelFragment());
                         }else {
                             Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
                         }

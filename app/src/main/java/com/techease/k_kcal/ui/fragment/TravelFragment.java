@@ -21,6 +21,8 @@ import com.techease.k_kcal.networking.ApiInterface;
 import com.techease.k_kcal.utilities.AlertUtils;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
+import org.json.JSONObject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -39,8 +41,12 @@ public class TravelFragment extends Fragment {
     ImageView ivCar;
     @BindView(R.id.iv_walk)
     ImageView ivWalk;
+    @BindView(R.id.iv_car_check)
+    ImageView ivCarCheck;
+    @BindView(R.id.iv_walk_check)
+    ImageView ivWalkCheck;
 
-    String strWalk="";
+    String strWalk = "";
     private boolean valid = false;
 
     @Override
@@ -52,19 +58,23 @@ public class TravelFragment extends Fragment {
         return view;
     }
 
-    private void initUI(){
-        ButterKnife.bind(this,view);
+    private void initUI() {
+        ButterKnife.bind(this, view);
 
         ivCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              strWalk = "car";
+                ivCarCheck.setVisibility(View.VISIBLE);
+                ivWalkCheck.setVisibility(View.GONE);
+                strWalk = "car";
             }
         });
 
         ivWalk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ivCarCheck.setVisibility(View.GONE);
+                ivWalkCheck.setVisibility(View.VISIBLE);
                 strWalk = " walk";
             }
         });
@@ -72,7 +82,7 @@ public class TravelFragment extends Fragment {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Validate()){
+                if (Validate()) {
                     alertDialog = AlertUtils.createProgressDialog(getActivity());
                     alertDialog.show();
                     apiCallTravelInfo();
@@ -84,11 +94,24 @@ public class TravelFragment extends Fragment {
 
     private void apiCallTravelInfo() {
         ApiInterface services = ApiClient.getApiClient(GeneralUtills.getApiToken(getActivity())).create(ApiInterface.class);
-        Call<TravelReponseModel> allUsers = services.travelInfo("");
+        Call<TravelReponseModel> allUsers = services.travelInfo(strWalk);
         allUsers.enqueue(new Callback<TravelReponseModel>() {
             @Override
             public void onResponse(Call<TravelReponseModel> call, Response<TravelReponseModel> response) {
                 alertDialog.dismiss();
+                if (response.body() == null) {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                } else if (response.body().getStatus()) {
+                    Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    GeneralUtills.connectFragment(getActivity(), new AllowFragment());
+                }
 
 
             }
@@ -100,14 +123,14 @@ public class TravelFragment extends Fragment {
         });
     }
 
-    private boolean Validate(){
+    private boolean Validate() {
         valid = true;
 
         if (strWalk.isEmpty()) {
             Toast.makeText(getActivity(), "please select walk", Toast.LENGTH_SHORT).show();
             valid = false;
         } else {
-            Log.d("error","no error");
+            Log.d("error", "no error");
         }
 
         return valid;

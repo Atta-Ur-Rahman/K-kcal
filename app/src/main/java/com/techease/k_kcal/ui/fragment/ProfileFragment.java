@@ -1,6 +1,7 @@
 package com.techease.k_kcal.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -8,15 +9,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.gif.GifDrawableEncoder;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.profileDataModels.ProfileResponseModel;
 import com.techease.k_kcal.models.travelDataModel.TravelReponseModel;
 import com.techease.k_kcal.networking.ApiClient;
 import com.techease.k_kcal.networking.ApiInterface;
+import com.techease.k_kcal.ui.activities.MainActivity;
 import com.techease.k_kcal.utilities.AlertUtils;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
@@ -42,6 +46,8 @@ public class ProfileFragment extends Fragment {
     TextView tvName;
     @BindView(R.id.iv_back_arrow)
     ImageView ivBackArrow;
+    @BindView(R.id.btn_logout)
+    Button btnLogout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,6 +76,14 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtills.connectFragment(getActivity(),new AllitemFragment());
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.putBooleanValueInEditor(getActivity(),"isLogin",false);
+                GeneralUtills.withOutBackStackConnectFragment(getActivity(),new WelcomeFragment());
             }
         });
     }

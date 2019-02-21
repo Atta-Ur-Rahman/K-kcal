@@ -33,6 +33,7 @@ import com.techease.k_kcal.adapters.AllitemAdapters;
 import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResponseModel;
+import com.techease.k_kcal.models.itemDataModels.ItemResturantDetailModel;
 import com.techease.k_kcal.networking.ApiClient;
 import com.techease.k_kcal.networking.ApiInterface;
 import com.techease.k_kcal.utilities.AlertUtils;
@@ -66,8 +67,11 @@ public class AllitemFragment extends Fragment {
     RecyclerView rvItems;
     @BindView(R.id.iv_profile)
     ImageView ivProfile;
+    @BindView(R.id.clear_filter_layout)
+    LinearLayout clearFilterLayout;
     AllitemAdapters allitemAdapters;
     List<ItemDetailModel> itemDataModelList;
+    List<ItemResturantDetailModel> itemResturantDetailModels;
     View view;
     public static TextView tvTotalitems;
 
@@ -91,11 +95,10 @@ public class AllitemFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
         token = GeneralUtills.getApiToken(getActivity());
-        Log.d("token", token);
         RecyclerView.LayoutManager mLayoutManagerReviews = new LinearLayoutManager(getActivity());
         rvItems.setLayoutManager(mLayoutManagerReviews);
         itemDataModelList = new ArrayList<>();
-
+        itemResturantDetailModels = new ArrayList<>();
         alertDialog = AlertUtils.createProgressDialog(getActivity());
         alertDialog.show();
         apiCallAllItems();
@@ -115,6 +118,14 @@ public class AllitemFragment extends Fragment {
             }
         });
 
+        clearFilterLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initUI();
+            }
+        });
+
+
     }
 
     private void apiCallAllItems() {
@@ -129,7 +140,13 @@ public class AllitemFragment extends Fragment {
                 } else if (response.body().getStatus()) {
 
                     itemDataModelList.addAll(response.body().getData());
-                    allitemAdapters = new AllitemAdapters(getActivity(), itemDataModelList);
+                    for (int i = 0; i < itemDataModelList.size(); i++) {
+                        itemResturantDetailModels.addAll(response.body().getData().get(i).getRestaurants());
+                    }
+                    clearFilterLayout.setVisibility(View.GONE);
+                    filterLayout.setVisibility(View.VISIBLE);
+
+                    allitemAdapters = new AllitemAdapters(getActivity(), itemDataModelList, itemResturantDetailModels);
                     rvItems.setAdapter(allitemAdapters);
                     allitemAdapters.notifyDataSetChanged();
 
@@ -200,7 +217,13 @@ public class AllitemFragment extends Fragment {
                 } else if (response.body().getStatus()) {
                     itemDataModelList.clear();
                     itemDataModelList.addAll(response.body().getData());
-                    allitemAdapters = new AllitemAdapters(getActivity(), itemDataModelList);
+                    for (int i = 0; i < itemDataModelList.size(); i++) {
+                        itemResturantDetailModels.addAll(response.body().getData().get(i).getRestaurants());
+                    }
+                    filterLayout.setVisibility(View.GONE);
+                    clearFilterLayout.setVisibility(View.VISIBLE);
+                    tvTotalitems.setText(String.valueOf(itemDataModelList.size()));
+                    allitemAdapters = new AllitemAdapters(getActivity(), itemDataModelList, itemResturantDetailModels);
                     rvItems.setAdapter(allitemAdapters);
                     allitemAdapters.notifyDataSetChanged();
 

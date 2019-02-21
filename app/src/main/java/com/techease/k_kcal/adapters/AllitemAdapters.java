@@ -9,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
+import com.techease.k_kcal.models.itemDataModels.ItemResturantDetailModel;
 import com.techease.k_kcal.ui.fragment.AllitemFragment;
 import com.techease.k_kcal.ui.fragment.DetailFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
@@ -22,11 +25,13 @@ import java.util.List;
 
 public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyViewHolder> {
     List<ItemDetailModel> itemDetailModels;
+    List<ItemResturantDetailModel> itemResturantDetailModelList;
     Context context;
 
-    public AllitemAdapters(Context context, List<ItemDetailModel> itemDetailModels) {
+    public AllitemAdapters(Context context, List<ItemDetailModel> itemDetailModels,List<ItemResturantDetailModel> itemResturantDetailModelList ) {
         this.context = context;
         this.itemDetailModels = itemDetailModels;
+        this.itemResturantDetailModelList = itemResturantDetailModelList;
     }
 
 
@@ -51,6 +56,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder viewHolder, final int position) {
         final ItemDetailModel model = itemDetailModels.get(position);
+        final  ItemResturantDetailModel resturantDetailModel = itemResturantDetailModelList.get(position);
 
         AllitemFragment.tvTotalitems.setText(String.valueOf(position + 1));
         Glide.with(context).load(model.getImageLink()).into(viewHolder.ivItem);
@@ -59,12 +65,17 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
         viewHolder.tvItemLocation.setText(model.getLocation());
 
 
-
-        viewHolder.ivDetailArrow.setOnClickListener(new View.OnClickListener() {
+        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
                 GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
+                GeneralUtills.putStringValueInEditor(context, "resturant_latitude", resturantDetailModel.getLatitude());
+                GeneralUtills.putStringValueInEditor(context, "resturant_longitude", resturantDetailModel.getLongitude());
+                GeneralUtills.putStringValueInEditor(context,"published",model.getPublishedAt());
+                GeneralUtills.putStringValueInEditor(context,"location",model.getLocation());
+                GeneralUtills.putStringValueInEditor(context,"item_name",model.getName());
+                GeneralUtills.putStringValueInEditor(context,"item_image",model.getImageLink());
                 GeneralUtills.connectFragment(context, new DetailFragment());
             }
         });
@@ -80,6 +91,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivItem, ivDetailArrow;
         TextView tvItemName, tvItemLocation, tvItemPublish;
+        RelativeLayout relativeLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -88,6 +100,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
             tvItemLocation = itemView.findViewById(R.id.tv_location);
             tvItemPublish = itemView.findViewById(R.id.tv_published);
             ivDetailArrow = itemView.findViewById(R.id.iv_detail_arrow);
+            relativeLayout = itemView.findViewById(R.id.rl_profile);
 
 
         }

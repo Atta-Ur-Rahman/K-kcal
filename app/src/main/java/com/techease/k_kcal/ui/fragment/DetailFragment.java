@@ -10,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -39,10 +42,20 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
     MapView mapView;
     @BindView(R.id.btn_navigate)
     Button btnNavigate;
+    @BindView(R.id.map_item_name)
+    TextView tvItemName;
+    @BindView(R.id.tv_map_published)
+    TextView tvPublished;
+    @BindView(R.id.tv_map_address)
+    TextView tvAddress;
+    @BindView(R.id.iv_map_item)
+    ImageView ivMapItem;
 
     GoogleMap map;
     View view;
     Unbinder unbinder;
+
+    String lat,lng,RestLat,RestLng;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,6 +64,12 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
         view = inflater.inflate(R.layout.fragment_detail, container, false);
         unbinder = ButterKnife.bind(this, view);
 
+         lat = GeneralUtills.getLat(getActivity());
+         lng = GeneralUtills.getLng(getActivity());
+         RestLat = GeneralUtills.latitude(getActivity());
+         RestLng = GeneralUtills.longitude(getActivity());
+
+        initUI();
         if (InternetUtils.isNetworkConnected(getActivity())) {
             mapView.onCreate(savedInstanceState);
             mapView.onResume();
@@ -69,11 +88,19 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps.mytracks?saddr=33.983970,71.428352&daddr=33.555749,72.832427"));
+                        Uri.parse("http://maps.google.com/maps.mytracks?saddr="+lat+","+lng+"&daddr="+RestLat+","+RestLng));
                 startActivity(intent);
             }
         });
         return view;
+    }
+
+    private void initUI(){
+        ButterKnife.bind(this,view);
+        tvAddress.setText(GeneralUtills.getLocation(getActivity()));
+        tvItemName.setText(GeneralUtills.getItemName(getActivity()));
+        tvPublished.setText(GeneralUtills.getPublished(getActivity()));
+        Glide.with(getActivity()).load(GeneralUtills.getImageLink(getActivity())).into(ivMapItem);
     }
 
 
@@ -81,11 +108,11 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.foot_dark);
-        LatLng sydney = new LatLng(33.986381, 71.438575);
+        LatLng sydney = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
         map.addMarker(new MarkerOptions().position(sydney)
                 .title("Marker in Peshwar")).setIcon(icon);
         map.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.986381, 71.438575), 12.0f));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(lat), Double.parseDouble(lng)), 12.0f));
     }
 
     @Override

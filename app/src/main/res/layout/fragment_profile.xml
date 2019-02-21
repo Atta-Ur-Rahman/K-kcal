@@ -124,55 +124,55 @@
                     android:layout_height="0.5sp"
                     android:background="@android:color/darker_gray" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60sp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="60sp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
 
-                    <LinearLayout
-                        android:layout_width="0sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0sp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="vertical">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Searches" />
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="Searches" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="2219" />
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="2219" />-->
 
-                    </LinearLayout>
+                    <!--</LinearLayout>-->
 
 
-                    <LinearLayout
-                        android:layout_width="0sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0sp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="vertical">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Visited" />
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="Visited" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="15" />
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="15" />-->
 
-                    </LinearLayout>
-                </LinearLayout>
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
             </LinearLayout>
 
 
@@ -184,63 +184,63 @@
                 android:orientation="vertical">
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15sp"
-                    android:layout_marginBottom="5sp"
-                    android:orientation="horizontal">
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15sp"-->
+                    <!--android:layout_marginBottom="5sp"-->
+                    <!--android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="10sp"
-                        android:text="Location"
-                        android:textColor="@android:color/darker_gray" />
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingLeft="10sp"-->
+                        <!--android:text="Location"-->
+                        <!--android:textColor="@android:color/darker_gray" />-->
 
-                    <ImageView
-                        android:layout_width="@dimen/arrow_width"
-                        android:layout_height="@dimen/arrow_height"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="15sp"
-                        android:src="@drawable/letf_arrow" />
-
-
-                </RelativeLayout>
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/arrow_width"-->
+                        <!--android:layout_height="@dimen/arrow_height"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="15sp"-->
+                        <!--android:src="@drawable/letf_arrow" />-->
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5sp"
-                    android:background="@android:color/darker_gray" />
+                <!--</RelativeLayout>-->
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15sp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="10sp"
-                        android:text="Profile Settings"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <ImageView
-                        android:layout_width="@dimen/arrow_width"
-                        android:layout_height="@dimen/arrow_height"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="15sp"
-                        android:src="@drawable/letf_arrow" />
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.5sp"-->
+                    <!--android:background="@android:color/darker_gray" />-->
 
 
-                </RelativeLayout>
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15sp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingLeft="10sp"-->
+                        <!--android:text="Profile Settings"-->
+                        <!--android:textColor="@android:color/darker_gray" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/arrow_width"-->
+                        <!--android:layout_height="@dimen/arrow_height"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="15sp"-->
+                        <!--android:src="@drawable/letf_arrow" />-->
+
+
+                <!--</RelativeLayout>-->
 
 
                 <View
@@ -250,31 +250,31 @@
                     android:background="@android:color/darker_gray" />
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15sp"
-                    android:layout_marginBottom="10sp"
-                    android:orientation="horizontal">
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15sp"-->
+                    <!--android:layout_marginBottom="10sp"-->
+                    <!--android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="10sp"
-                        android:text="Account Settings"
-                        android:textColor="@android:color/darker_gray" />
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingLeft="10sp"-->
+                        <!--android:text="Account Settings"-->
+                        <!--android:textColor="@android:color/darker_gray" />-->
 
-                    <ImageView
-                        android:layout_width="@dimen/arrow_width"
-                        android:layout_height="@dimen/arrow_height"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="15sp"
-                        android:src="@drawable/letf_arrow" />
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/arrow_width"-->
+                        <!--android:layout_height="@dimen/arrow_height"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="15sp"-->
+                        <!--android:src="@drawable/letf_arrow" />-->
 
 
-                </RelativeLayout>
+                <!--</RelativeLayout>-->
 
             </LinearLayout>
 
@@ -293,7 +293,7 @@
                     android:layout_marginTop="15sp"
                     android:layout_marginBottom="5sp"
                     android:paddingLeft="10sp"
-                    android:text="Location"
+                    android:text="About us"
                     android:textColor="@android:color/darker_gray" />
 
 
@@ -307,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:paddingLeft="10sp"
-                    android:text="Location"
+                    android:text="Term and condition"
                     android:layout_marginTop="15sp"
                     android:layout_marginBottom="10sp"
                     android:textColor="@android:color/darker_gray" />
@@ -316,6 +316,7 @@
 
 
             <Button
+                android:id="@+id/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@mipmap/btn2"

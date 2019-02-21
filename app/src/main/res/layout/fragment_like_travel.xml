@@ -90,6 +90,15 @@
                     android:textColor="@color/text_title_orange"
                     android:layout_marginTop="30sp"
                     android:layout_marginLeft="35sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_car_check"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/check" />
             </FrameLayout>
 
 
@@ -120,6 +129,15 @@
                     android:textColor="@android:color/white"
                     android:layout_marginTop="30sp"
                     android:layout_marginLeft="35sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_walk_check"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/check" />
             </FrameLayout>
 
 
