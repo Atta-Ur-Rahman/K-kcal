@@ -7,4 +7,6 @@
 
     <color name="text_title_orange">#FC6C4A</color>
     <color name="green">#34B171</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

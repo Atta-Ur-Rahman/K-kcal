@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">K-kcal</string>
+    <string name="app">K_KCAL APP</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lorem_ipsum_dolor_sit_amet_consectetur_n_adipiscing_elit_set_do_eiusmod_tempor_n_incididunt_ut_labore_et_dolore_magna_n_aliqua">Lorem ipsum dolor sit amet,consectetur\n adipiscing elit, set do eiusmod tempor \n incididunt ut labore et dolore magna \n  aliqua.</string>
     <string name="forget_password"><u>Forget password ?</u></string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account ? <font color="red"><u><b>SIGN UP</b></u></font></string>
     <string name="already_onboar_login">Already onboard? <font color="red"><u><b>Login</b></u></font></string>
@@ -26,4 +26,8 @@
     <string name="bread_amp_egg"><![CDATA[Bread & Egg]]></string>
     <string name="_4_mins">4-mins</string>
     <string name="m_amp_s"><![CDATA[M & S]]></string>
+
+
+    <string name="welcome_text">Totally control, total flexibility and total choice is totally yours!
+        Find options and variety all within your specifications and burn a few extra calories getting there ;-D</string>
 </resources>

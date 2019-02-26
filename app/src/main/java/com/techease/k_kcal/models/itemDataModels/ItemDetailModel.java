@@ -39,12 +39,21 @@ public class ItemDetailModel {
     @SerializedName("longitude")
     @Expose
     private String longitude;
+    @SerializedName("category_id")
+    @Expose
+    private String categoryId;
+    @SerializedName("distance")
+    @Expose
+    private Integer distance;
     @SerializedName("publishedAt")
     @Expose
     private String publishedAt;
     @SerializedName("ImageLink")
     @Expose
     private String imageLink;
+    @SerializedName("category")
+    @Expose
+    private String category;
     @SerializedName("restaurants")
     @Expose
     private List<ItemResturantDetailModel> restaurants = null;
@@ -137,6 +146,22 @@ public class ItemDetailModel {
         this.longitude = longitude;
     }
 
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Integer getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Integer distance) {
+        this.distance = distance;
+    }
+
     public String getPublishedAt() {
         return publishedAt;
     }
@@ -151,6 +176,14 @@ public class ItemDetailModel {
 
     public void setImageLink(String imageLink) {
         this.imageLink = imageLink;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public List<ItemResturantDetailModel> getRestaurants() {

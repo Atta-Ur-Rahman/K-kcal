@@ -94,7 +94,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Distance"
+            android:text="Kcals"
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/text_size"
             android:textStyle="bold" />
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="10 Miles"
+            android:text="10 Kcals"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size"
             android:textStyle="bold" />
@@ -117,8 +117,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
         android:backgroundTint="@color/text_title_orange"
-        android:max="25"
-        android:progress="10"
+        android:max="1230"
+        android:min="30"
+        android:progress="500"
         android:thumb="@drawable/seekbar_thum_shap" />
 
 
@@ -155,8 +156,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
         android:backgroundTint="@color/text_title_orange"
-        android:max="25"
-        android:progress="10"
+        android:max="100"
+        android:progress="30"
         android:thumb="@drawable/seekbar_thum_shap" />
 
 

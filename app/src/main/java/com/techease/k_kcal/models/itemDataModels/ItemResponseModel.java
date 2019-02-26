@@ -12,15 +12,6 @@ public class ItemResponseModel {
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("currentPage")
-    @Expose
-    private Integer currentPage;
-    @SerializedName("perPage")
-    @Expose
-    private Integer perPage;
-    @SerializedName("total")
-    @Expose
-    private Integer total;
     @SerializedName("data")
     @Expose
     private List<ItemDetailModel> data = null;
@@ -42,30 +33,6 @@ public class ItemResponseModel {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Integer getCurrentPage() {
-        return currentPage;
-    }
-
-    public void setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-    }
-
-    public Integer getPerPage() {
-        return perPage;
-    }
-
-    public void setPerPage(Integer perPage) {
-        this.perPage = perPage;
-    }
-
-    public Integer getTotal() {
-        return total;
-    }
-
-    public void setTotal(Integer total) {
-        this.total = total;
     }
 
     public List<ItemDetailModel> getData() {

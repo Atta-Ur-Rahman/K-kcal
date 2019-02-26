@@ -72,7 +72,7 @@ public class RegistrationFragment extends Fragment {
     Button btnSignUp;
 
     boolean valid = false;
-    String strFullName,strEmail,strPhone,strPassword,strConfirmPassword,strLatitude,strLongitude,strDeviceType;
+    String strFullName,strEmail,strPhone="",strPassword,strConfirmPassword,strLatitude,strLongitude,strDeviceType;
     File sourceFile;
     final int CAMERA_CAPTURE = 1;
     final int RESULT_LOAD_IMAGE = 2;
@@ -200,7 +200,7 @@ public class RegistrationFragment extends Fragment {
         strDeviceType = "Android";
 
         if(sourceFile==null){
-            Toast.makeText(getActivity(), "please select your profile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "please set your profile image", Toast.LENGTH_SHORT).show();
             valid = false;
         }
         else {
@@ -221,12 +221,12 @@ public class RegistrationFragment extends Fragment {
             etEmail.setError(null);
         }
 
-        if (strPhone.isEmpty()) {
-            etPhone.setError("enter a valid phone number");
-            valid = false;
-        } else {
-            etPhone.setError(null);
-        }
+//        if (strPhone.isEmpty()) {
+//            etPhone.setError("enter a valid phone number");
+//            valid = false;
+//        } else {
+//            etPhone.setError(null);
+//        }
 
         if (strConfirmPassword.isEmpty()) {
             etConfirmPassword.setError("enter a valid password");

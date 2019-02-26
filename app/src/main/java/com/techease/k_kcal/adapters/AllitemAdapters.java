@@ -3,8 +3,10 @@ package com.techease.k_kcal.adapters;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +21,11 @@ import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResturantDetailModel;
 import com.techease.k_kcal.ui.fragment.AllitemFragment;
 import com.techease.k_kcal.ui.fragment.DetailFragment;
+import com.techease.k_kcal.ui.fragment.ResturantFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyViewHolder> {
@@ -32,6 +37,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
         this.context = context;
         this.itemDetailModels = itemDetailModels;
         this.itemResturantDetailModelList = itemResturantDetailModelList;
+
     }
 
 
@@ -57,17 +63,17 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     public void onBindViewHolder(@NonNull final MyViewHolder viewHolder, final int position) {
         final ItemDetailModel model = itemDetailModels.get(position);
         final  ItemResturantDetailModel resturantDetailModel = itemResturantDetailModelList.get(position);
-
+//
         AllitemFragment.tvTotalitems.setText(String.valueOf(position + 1));
         Glide.with(context).load(model.getImageLink()).into(viewHolder.ivItem);
         viewHolder.tvItemName.setText(model.getName());
         viewHolder.tvItemPublish.setText(model.getPublishedAt());
         viewHolder.tvItemLocation.setText(model.getLocation());
 
-
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
                 GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
                 GeneralUtills.putStringValueInEditor(context, "resturant_latitude", resturantDetailModel.getLatitude());
@@ -76,7 +82,10 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
                 GeneralUtills.putStringValueInEditor(context,"location",model.getLocation());
                 GeneralUtills.putStringValueInEditor(context,"item_name",model.getName());
                 GeneralUtills.putStringValueInEditor(context,"item_image",model.getImageLink());
+                ResturantFragment.itemResturantDetailModelList = itemResturantDetailModelList;
+                ResturantFragment.resturantDetailModel =  itemResturantDetailModelList.get(position);
                 GeneralUtills.connectFragment(context, new DetailFragment());
+
             }
         });
 

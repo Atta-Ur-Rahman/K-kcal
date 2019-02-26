@@ -37,7 +37,7 @@
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
             android:gravity="center"
-            android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_n_adipiscing_elit_set_do_eiusmod_tempor_n_incididunt_ut_labore_et_dolore_magna_n_aliqua"
+            android:text="@string/welcome_text"
             android:textSize="16sp" />
 
     </LinearLayout>

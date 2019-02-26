@@ -60,8 +60,10 @@ public interface ApiInterface {
     @POST("sendCode")
     Call<ResendCodeModel> resendCode();
 
-    @GET("getItems")
-    Call<ItemResponseModel> getItems();
+    @FormUrlEncoded
+    @POST("getItems")
+    Call<ItemResponseModel> getItems(@Field("latitude") String lat,
+                                     @Field("longitude") String lng);
 
     @GET("userProfile")
     Call<ProfileResponseModel> getUserProfile();
@@ -76,11 +78,12 @@ public interface ApiInterface {
     @POST("updateProfilePicture")
     Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
                                                          @Part("profilePicture") RequestBody fileName);
-
-    @GET("getItems/search?")
-    Call<ItemResponseModel> getFiltersItems(@Query("category") String category,
-                                            @Query("price") String price,
-                                            @Query("location") String location);
+    @FormUrlEncoded
+    @POST("getItems/search")
+    Call<ItemResponseModel> getFiltersItems(@Field("price") String category,
+                                            @Field("category") String price,
+                                            @Field("latitude") String lat,
+                                            @Field("longitude") String lng);
 
 
     @FormUrlEncoded
@@ -110,6 +113,15 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("addTravelInfo")
     Call<TravelReponseModel> travelInfo(@Field("travel") String walk);
+
+
+
+    //use this for query request
+//    @GET("getItems/search?")
+//    Call<ItemResponseModel> getFiltersItems(@Query("price") String category,
+//                                            @Query("category") String price,
+//                                            @Query("latitude") String lat,
+//                                            @Query("longitude") String lng);
 
 
 }

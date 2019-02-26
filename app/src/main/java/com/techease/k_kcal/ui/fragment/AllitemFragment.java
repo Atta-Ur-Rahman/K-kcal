@@ -130,7 +130,7 @@ public class AllitemFragment extends Fragment {
 
     private void apiCallAllItems() {
         ApiInterface services = ApiClient.getApiClient(token).create(ApiInterface.class);
-        Call<ItemResponseModel> allUsers = services.getItems();
+        Call<ItemResponseModel> allUsers = services.getItems(GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
         allUsers.enqueue(new Callback<ItemResponseModel>() {
             @Override
             public void onResponse(Call<ItemResponseModel> call, Response<ItemResponseModel> response) {
@@ -207,7 +207,7 @@ public class AllitemFragment extends Fragment {
 
     private void apiCallFilterItems() {
         ApiInterface services = ApiClient.getApiClient(token).create(ApiInterface.class);
-        Call<ItemResponseModel> allUsers = services.getFiltersItems(strCategoryItem, strPriceRange, "pakistan");
+        Call<ItemResponseModel> allUsers = services.getFiltersItems(strPriceRange, strCategoryItem, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
         allUsers.enqueue(new Callback<ItemResponseModel>() {
             @Override
             public void onResponse(Call<ItemResponseModel> call, Response<ItemResponseModel> response) {
@@ -287,7 +287,7 @@ public class AllitemFragment extends Fragment {
         seekBarDistance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvSeekMiles.setText(String.valueOf(progress + "Miles"));
+                tvSeekMiles.setText(String.valueOf(progress + "Kcals"));
             }
 
             @Override
