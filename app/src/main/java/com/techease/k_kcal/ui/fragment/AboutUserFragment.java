@@ -71,7 +71,7 @@ public class AboutUserFragment extends Fragment {
     @BindView(R.id.btn_continue)
     Button btnContinue;
 
-    String strGender = "", strAge, strWeight, strHeight, strProfession, strLifeStyle, strAddress;
+    String strGender = "", strAge, strWeight, strHeight, strProfession="", strLifeStyle, strAddress;
     private boolean valid = false;
 
     @Override
@@ -192,12 +192,12 @@ public class AboutUserFragment extends Fragment {
             etWeight.setError(null);
         }
 
-        if (strProfession.isEmpty()) {
-            etProfession.setError("Please select your profession");
-            valid = false;
-        } else {
-            etProfession.setError(null);
-        }
+//        if (strProfession.isEmpty()) {
+//            etProfession.setError("Please select your profession");
+//            valid = false;
+//        } else {
+//            etProfession.setError(null);
+//        }
 
         if (strLifeStyle.isEmpty()) {
             etLifeStyle.setError("Please select your lifestyle");

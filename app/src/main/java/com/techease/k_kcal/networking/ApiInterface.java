@@ -4,6 +4,7 @@ import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.forgotDataModels.ChangePasswordModel;
 import com.techease.k_kcal.models.forgotDataModels.ForgotPasswordModel;
 import com.techease.k_kcal.models.forgotDataModels.VerifyCodeResponseModel;
+import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResponseModel;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.moreinfoDataModel.MoreInfoProfileModel;
@@ -64,6 +65,9 @@ public interface ApiInterface {
     @POST("getItems")
     Call<ItemResponseModel> getItems(@Field("latitude") String lat,
                                      @Field("longitude") String lng);
+
+    @GET("getItem?")
+    Call<ItemResponseModel> getResturants(@Query("id") int id);
 
     @GET("userProfile")
     Call<ProfileResponseModel> getUserProfile();

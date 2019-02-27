@@ -56,7 +56,7 @@ public class ItemDetailModel {
     private String category;
     @SerializedName("restaurants")
     @Expose
-    private List<ItemResturantDetailModel> restaurants = null;
+    private List<ResturantDetailModel> restaurants = null;
 
     public Integer getId() {
         return id;
@@ -186,11 +186,11 @@ public class ItemDetailModel {
         this.category = category;
     }
 
-    public List<ItemResturantDetailModel> getRestaurants() {
+    public List<ResturantDetailModel> getRestaurants() {
         return restaurants;
     }
 
-    public void setRestaurants(List<ItemResturantDetailModel> restaurants) {
+    public void setRestaurants(List<ResturantDetailModel> restaurants) {
         this.restaurants = restaurants;
     }
 }

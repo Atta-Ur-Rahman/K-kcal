@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +32,7 @@ import com.techease.k_kcal.adapters.AllitemAdapters;
 import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
 import com.techease.k_kcal.models.itemDataModels.ItemResponseModel;
-import com.techease.k_kcal.models.itemDataModels.ItemResturantDetailModel;
+import com.techease.k_kcal.models.itemDataModels.ResturantDetailModel;
 import com.techease.k_kcal.networking.ApiClient;
 import com.techease.k_kcal.networking.ApiInterface;
 import com.techease.k_kcal.utilities.AlertUtils;
@@ -45,7 +44,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -71,7 +69,7 @@ public class AllitemFragment extends Fragment {
     LinearLayout clearFilterLayout;
     AllitemAdapters allitemAdapters;
     List<ItemDetailModel> itemDataModelList;
-    List<ItemResturantDetailModel> itemResturantDetailModels;
+    List<ResturantDetailModel> itemResturantDetailModels;
     View view;
     public static TextView tvTotalitems;
 

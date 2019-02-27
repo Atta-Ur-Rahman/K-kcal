@@ -69,6 +69,10 @@ public class GeneralUtills {
         return context.getSharedPreferences(Config.MY_PREF, 0);
     }
 
+    public static int getItemID(Context context){
+        return getSharedPreferences(context).getInt("itemID",0);
+    }
+
     public static String getApiToken(Context context){
         return getSharedPreferences(context).getString("api_token","");
     }

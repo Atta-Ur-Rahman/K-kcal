@@ -11,27 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aef716f-af2c-484d-bda0-177cb6b55d3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/ResturantsAdapters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResturantDetailModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ResturantDetailModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,26 +79,26 @@
     <session id="-1157543679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="14" />
+          <entry key="project.open.time.1" value="15" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
           <entry key="gradle" value="9" />
-          <entry key="java" value="411" />
+          <entry key="java" value="440" />
           <entry key="png" value="2" />
-          <entry key="xml" value="169" />
+          <entry key="xml" value="173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -108,46 +106,36 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="9" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="411" />
-          <entry key="XML" value="169" />
+          <entry key="JAVA" value="440" />
+          <entry key="XML" value="173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="117" />
           <entry key="gradle" value="34" />
-          <entry key="java" value="15119" />
-          <entry key="txt" value="169" />
-          <entry key="xml" value="3651" />
+          <entry key="java" value="15548" />
+          <entry key="txt" value="183" />
+          <entry key="xml" value="4086" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="34" />
-          <entry key="JAVA" value="15119" />
-          <entry key="PLAIN_TEXT" value="286" />
-          <entry key="XML" value="3651" />
+          <entry key="JAVA" value="15548" />
+          <entry key="PLAIN_TEXT" value="300" />
+          <entry key="XML" value="4086" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="289" column="68" selection-start-line="289" selection-start-column="68" selection-end-line="289" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+            <state relative-caret-position="150">
+              <caret line="147" column="109" selection-start-line="147" selection-start-column="99" selection-end-line="147" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -175,8 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/filterDataModels/ItemCategoriesResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/filterDataModels/ItemCategoriesModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/LikeTravelFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/travelDataModel/TravelDetailModel.java" />
@@ -188,7 +174,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileUpdateDataModel/ProfileUpdateResponseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileUpdateDataModel/ProfileImageDetailModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileUpdateDataModel/ProfileImageResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_yaaay.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
@@ -202,13 +187,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_verify_code.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ahoy.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_like_travel.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/TravelFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_item_found.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/WelcomeFragment.java" />
@@ -218,14 +200,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResturantDetailModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResturantDetailModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiInterface.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/ResturantsAdapters.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -238,16 +226,15 @@
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
-    <option name="height" value="748" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -281,29 +268,11 @@
               <item name="techease" type="462c0819:PsiDirectoryNode" />
               <item name="k_kcal" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="K-kcal" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techease" type="462c0819:PsiDirectoryNode" />
-              <item name="k_kcal" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="K-kcal" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techease" type="462c0819:PsiDirectoryNode" />
-              <item name="k_kcal" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="fragment" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +280,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.techease.k_kcal" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="col&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/colors.xml&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/activity_splash.xml&#10;We&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_welcome.xml&#10;strin&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Det&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;Al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java&#10;Pr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java&#10;Ed&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;Edi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;ab&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Ma&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;about&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;All&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java&#10;Con&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/Config.java&#10;Gen&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_login.xml&#10;De&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;D&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Mai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;Sp&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;For&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/forgotpassword/ForgotPasswordFragment.java&#10;Ve&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;Ver&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;si&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java&#10;Login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" />
+    <property name="SearchEverywhereHistoryKey" value="Re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;All&#9;PSI&#9;JAVA://com.techease.k_kcal.ui.fragment.AllitemFragment&#10;Al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java&#10;col&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/colors.xml&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/activity_splash.xml&#10;We&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_welcome.xml&#10;strin&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Det&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Pr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java&#10;Ed&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;Edi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;ab&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Ma&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;about&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Con&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/Config.java&#10;Gen&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_login.xml&#10;De&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;D&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Mai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;Sp&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;For&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/forgotpassword/ForgotPasswordFragment.java&#10;Ve&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;Ver&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;si&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java&#10;Login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -513,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550746299237</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="filter updated">
+      <created>1551179344650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551179344650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -530,7 +506,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24022801" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24022801" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -545,14 +521,14 @@
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32911393" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32208157" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32980457" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.32980457" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.30944625" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -564,7 +540,8 @@
     <MESSAGE value="profile updation api integrated" />
     <MESSAGE value="map work done" />
     <MESSAGE value="google map work updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="google map work updated" />
+    <MESSAGE value="filter updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -628,13 +605,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileDataModels/ProfileDetailModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileDataModels/ProfileResponseModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -674,12 +644,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_yaaay.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileUpdateDataModel/ProfileImageResponseModel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -696,12 +666,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/moreinfoDataModel/MoreInfoProfileModel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -746,36 +716,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_verify_code.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="943">
           <caret line="132" column="44" selection-start-line="132" selection-start-column="44" selection-end-line="132" selection-end-column="44" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_item_found_layout.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="294" column="46" lean-forward="true" selection-start-line="294" selection-start-column="46" selection-end-line="294" selection-end-column="46" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -785,12 +747,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_like_travel.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="133" column="44" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/TravelFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -807,12 +769,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_item_found.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
@@ -822,69 +784,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="80" column="45" lean-forward="true" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ahoy.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
           <caret line="256" column="15" selection-start-line="256" selection-start-column="15" selection-end-line="256" selection-end-column="15" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="43" column="59" lean-forward="true" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResponseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -895,20 +806,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -925,22 +829,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#528#541#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -949,14 +843,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResturantDetailModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding>
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_item_found_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ResturantDetailModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -967,57 +887,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-          <folding>
-            <element signature="e#2786#3801#0" expanded="true" />
-            <element signature="e#3800#3801#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1310">
+          <caret line="188" column="36" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResponseModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+        <state relative-caret-position="195">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/networking/ApiInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        <state relative-caret-position="299">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ResturantFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="73" column="84" selection-start-line="73" selection-start-column="84" selection-end-line="73" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/ResturantsAdapters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="65" column="96" selection-start-line="65" selection-start-column="96" selection-end-line="65" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/AllitemAdapters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="72" column="99" selection-start-line="72" selection-start-column="99" selection-end-line="72" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#2070#2088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="242" column="54" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="289" column="29" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
+          <folding>
+            <element signature="e#1207#1226#0" expanded="true" />
+            <element signature="e#1260#1284#0" expanded="true" />
+            <element signature="e#1570#1588#0" expanded="true" />
+            <element signature="e#5488#5506#0" expanded="true" />
+            <element signature="e#7745#7763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="73" column="72" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="85" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
+        <state relative-caret-position="150">
           <caret line="147" column="109" selection-start-line="147" selection-start-column="99" selection-end-line="147" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="289" column="68" selection-start-line="289" selection-start-column="68" selection-end-line="289" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
         </state>
       </provider>
     </entry>

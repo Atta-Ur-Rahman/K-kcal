@@ -1,39 +1,32 @@
 package com.techease.k_kcal.adapters;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.itemDataModels.ItemDetailModel;
-import com.techease.k_kcal.models.itemDataModels.ItemResturantDetailModel;
+import com.techease.k_kcal.models.itemDataModels.ResturantDetailModel;
 import com.techease.k_kcal.ui.fragment.AllitemFragment;
-import com.techease.k_kcal.ui.fragment.DetailFragment;
 import com.techease.k_kcal.ui.fragment.ResturantFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyViewHolder> {
     List<ItemDetailModel> itemDetailModels;
-    List<ItemResturantDetailModel> itemResturantDetailModelList;
+    List<ResturantDetailModel> itemResturantDetailModelList;
     Context context;
 
-    public AllitemAdapters(Context context, List<ItemDetailModel> itemDetailModels,List<ItemResturantDetailModel> itemResturantDetailModelList ) {
+    public AllitemAdapters(Context context, List<ItemDetailModel> itemDetailModels, List<ResturantDetailModel> itemResturantDetailModelList) {
         this.context = context;
         this.itemDetailModels = itemDetailModels;
         this.itemResturantDetailModelList = itemResturantDetailModelList;
@@ -62,8 +55,8 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder viewHolder, final int position) {
         final ItemDetailModel model = itemDetailModels.get(position);
-        final  ItemResturantDetailModel resturantDetailModel = itemResturantDetailModelList.get(position);
-//
+        final ResturantDetailModel resturantDetailModel = itemResturantDetailModelList.get(position);
+
         AllitemFragment.tvTotalitems.setText(String.valueOf(position + 1));
         Glide.with(context).load(model.getImageLink()).into(viewHolder.ivItem);
         viewHolder.tvItemName.setText(model.getName());
@@ -74,17 +67,11 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
             @Override
             public void onClick(View v) {
 
-                GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
-                GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
-                GeneralUtills.putStringValueInEditor(context, "resturant_latitude", resturantDetailModel.getLatitude());
-                GeneralUtills.putStringValueInEditor(context, "resturant_longitude", resturantDetailModel.getLongitude());
-                GeneralUtills.putStringValueInEditor(context,"published",model.getPublishedAt());
-                GeneralUtills.putStringValueInEditor(context,"location",model.getLocation());
-                GeneralUtills.putStringValueInEditor(context,"item_name",model.getName());
-                GeneralUtills.putStringValueInEditor(context,"item_image",model.getImageLink());
-                ResturantFragment.itemResturantDetailModelList = itemResturantDetailModelList;
-                ResturantFragment.resturantDetailModel =  itemResturantDetailModelList.get(position);
-                GeneralUtills.connectFragment(context, new DetailFragment());
+                GeneralUtills.putIntegerValueInEditor(context,"itemID",model.getId());
+//                GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
+//                GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
+                GeneralUtills.putStringValueInEditor(context, "published", model.getPublishedAt());
+                GeneralUtills.connectFragment(context, new ResturantFragment());
 
             }
         });
