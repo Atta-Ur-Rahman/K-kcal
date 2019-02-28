@@ -23,13 +23,6 @@
                 android:layout_height="match_parent"
                 android:paddingLeft="20sp"
                 android:paddingRight="20sp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20sp"
-                    android:gravity="center"
-                    android:text="1 0f 4"
-                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -198,6 +191,7 @@
 
 
                 <TextView
+                    android:id="@+id/on_board"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
@@ -229,6 +223,7 @@
 
 
             <ImageView
+                android:id="@+id/iv_back"
                 android:layout_width="wrap_content"
                 android:layout_height="30sp"
                 android:layout_gravity="center_vertical"

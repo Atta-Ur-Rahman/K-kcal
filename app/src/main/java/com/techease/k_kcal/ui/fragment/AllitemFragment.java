@@ -169,6 +169,7 @@ public class AllitemFragment extends Fragment {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
+                    categoryItemArrayList.clear();
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject itemObject = jsonArray.getJSONObject(i);
                         String strName = itemObject.getString("name");

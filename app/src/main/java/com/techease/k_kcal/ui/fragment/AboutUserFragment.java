@@ -8,9 +8,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -34,7 +37,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -66,12 +72,15 @@ public class AboutUserFragment extends Fragment {
     EditText etWeight;
     @BindView(R.id.et_profession)
     EditText etProfession;
-    @BindView(R.id.et_life_style)
-    EditText etLifeStyle;
+    @BindView(R.id.spinner_life_style)
+    Spinner spLifeStyle;
     @BindView(R.id.btn_continue)
     Button btnContinue;
 
-    String strGender = "", strAge, strWeight, strHeight, strProfession="", strLifeStyle, strAddress;
+    List<String> lifeStyleList;
+    ArrayAdapter<String> lifeStyleArrayAdapter;
+
+    String strGender = "", strAge, strWeight, strHeight, strProfession = "", strLifeStyle, strAddress;
     private boolean valid = false;
 
     @Override
@@ -85,6 +94,22 @@ public class AboutUserFragment extends Fragment {
 
     private void initUI() {
         ButterKnife.bind(this, view);
+        lifeStyleList = Arrays.asList(getResources().getStringArray(R.array.lifestyle_array));
+        lifeStyleArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_layout, R.id.spinner_text, lifeStyleList);
+        spLifeStyle.setAdapter(lifeStyleArrayAdapter);
+
+        spLifeStyle.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                strLifeStyle = spLifeStyle.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         ivMale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +117,6 @@ public class AboutUserFragment extends Fragment {
                 ivMaleCheck.setVisibility(View.VISIBLE);
                 ivFemaleCheck.setVisibility(View.GONE);
                 strGender = "male";
-                Toast.makeText(getActivity(), strGender, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -102,7 +126,6 @@ public class AboutUserFragment extends Fragment {
                 ivMaleCheck.setVisibility(View.GONE);
                 ivFemaleCheck.setVisibility(View.VISIBLE);
                 strGender = "female";
-                Toast.makeText(getActivity(), strGender, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -130,9 +153,9 @@ public class AboutUserFragment extends Fragment {
                     try {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
-                        if (jObjError.getString("message").contains("Successfully")){
+                        if (jObjError.getString("message").contains("Successfully")) {
                             GeneralUtills.connectFragment(getActivity(), new TravelFragment());
-                        }else {
+                        } else {
                             Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
                         }
 
@@ -162,8 +185,8 @@ public class AboutUserFragment extends Fragment {
         strHeight = etHeight.getText().toString().trim();
         strWeight = etWeight.getText().toString().trim();
         strProfession = etProfession.getText().toString().trim();
-        strLifeStyle = etLifeStyle.getText().toString().trim();
         strAddress = "peshawar";
+
 
         if (strGender.isEmpty()) {
             Toast.makeText(getActivity(), "please select Gender", Toast.LENGTH_SHORT).show();
@@ -200,10 +223,10 @@ public class AboutUserFragment extends Fragment {
 //        }
 
         if (strLifeStyle.isEmpty()) {
-            etLifeStyle.setError("Please select your lifestyle");
+            Toast.makeText(getActivity(), "Please select your lifestyle", Toast.LENGTH_SHORT).show();
             valid = false;
         } else {
-            etLifeStyle.setError(null);
+            Log.d("null", "no error");
         }
         return valid;
     }

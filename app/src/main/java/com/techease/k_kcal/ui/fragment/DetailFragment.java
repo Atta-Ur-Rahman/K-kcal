@@ -48,6 +48,8 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
     TextView tvPublished;
     @BindView(R.id.tv_map_address)
     TextView tvAddress;
+    @BindView(R.id.tv_calories)
+    TextView tvCalories;
     @BindView(R.id.iv_map_item)
     ImageView ivMapItem;
 
@@ -100,6 +102,7 @@ public class DetailFragment extends Fragment implements OnMapReadyCallback {
         tvAddress.setText(GeneralUtills.getLocation(getActivity()));
         tvItemName.setText(GeneralUtills.getItemName(getActivity()));
         tvPublished.setText(GeneralUtills.getPublished(getActivity()));
+        tvCalories.setText(GeneralUtills.getItemCalories(getActivity()));
         Glide.with(getActivity()).load(GeneralUtills.getImageLink(getActivity())).into(ivMapItem);
     }
 

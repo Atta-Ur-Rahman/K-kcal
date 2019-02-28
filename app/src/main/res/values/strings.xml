@@ -4,13 +4,13 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="forget_password"><u>Forget password ?</u></string>
+    <string name="forget_password"><u>Forgot password ?</u></string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account ? <font color="red"><u><b>SIGN UP</b></u></font></string>
     <string name="already_onboar_login">Already onboard? <font color="red"><u><b>Login</b></u></font></string>
     <string name="upload_profile_picture">Upload \nprofile picture</string>
     <string name="by_click_signup_you_ll_agree_with_our_terms_amp_condition_and_pricay_poilcy">By click signup you\'ll agree with our\nTerms &amp; Condition and Pricay Poilcy</string>
     <string name="resend_code_text">Resend Confirmation Code</string>
-    <string name="_1_08">(1:8)</string>
+    <string name="expire">Code will be Expire in I minutes</string>
     <string name="verify">Verify</string>
     <string name="verify_text">We have sent you the code on the number you provided, please verify yourself.</string>
     <string name="_1_of_4">1 of 4</string>
@@ -30,4 +30,20 @@
 
     <string name="welcome_text">Totally control, total flexibility and total choice is totally yours!
         Find options and variety all within your specifications and burn a few extra calories getting there ;-D</string>
+
+    <string-array name="lifestyle_array">
+        <item>Sedate</item>
+        <item>Sporty</item>
+        <item>Domestic</item>
+        <item>Deskjob</item>
+        <item>Manual job</item>
+        <item>Outdoor </item>
+        <item>Gym</item>
+        <item>Outdoor activities</item>
+        <item>Extreme Sports</item>
+        <item>Winter Sports</item>
+        <item>Healthy</item>
+        <item>Calorie Conscious</item>
+        <item>Clean Eater</item>
+    </string-array>
 </resources>

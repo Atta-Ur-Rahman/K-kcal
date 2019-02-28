@@ -116,6 +116,7 @@
                     android:inputType="number"
                     android:paddingLeft="10sp"
                     android:paddingBottom="20sp"
+                    android:textStyle="normal"
                     android:textColor="@android:color/darker_gray"
                     android:textColorHint="@android:color/darker_gray"
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -164,6 +165,7 @@
                         android:hint="Height"
                         android:inputType="numberDecimal"
                         android:paddingLeft="10sp"
+                        android:textStyle="normal"
                         android:textColor="@android:color/darker_gray"
                         android:textColorHint="@android:color/darker_gray"
                         android:textCursorDrawable="@drawable/cursor_color"
@@ -212,6 +214,7 @@
                         android:hint="Weight"
                         android:inputType="numberDecimal"
                         android:paddingLeft="10sp"
+                        android:textStyle="normal"
                         android:textColor="@android:color/darker_gray"
                         android:textColorHint="@android:color/darker_gray"
                         android:textCursorDrawable="@drawable/cursor_color"
@@ -238,6 +241,7 @@
                     android:inputType="text"
                     android:paddingLeft="10sp"
                     android:paddingBottom="20sp"
+                    android:textStyle="normal"
                     android:textColor="@android:color/darker_gray"
                     android:textColorHint="@android:color/darker_gray"
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -245,29 +249,33 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:backgroundTint="@color/colorAccent"
-                android:theme="@style/Theme.AppCompat"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false">
 
-                <EditText
-                    android:id="@+id/et_life_style"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="LifeStyle"
-                    android:inputType="text"
-                    android:paddingLeft="10sp"
-                    android:paddingBottom="20sp"
-                    android:textColor="@android:color/darker_gray"
-                    android:textColorHint="@android:color/darker_gray"
-                    android:textCursorDrawable="@drawable/cursor_color"
-                    app:backgroundTint="@android:color/darker_gray" />
 
-            </android.support.design.widget.TextInputLayout>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="5sp"
+               android:layout_marginLeft="5sp"
+               android:layout_marginTop="15sp">
+
+               <Spinner
+                   android:id="@+id/spinner_life_style"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:pointerIcon="vertical_double_arrow"
+                   android:textStyle="normal"></Spinner>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_below="@id/spinner_life_style"
+                   android:background="@android:color/darker_gray"
+                   />
+
+           </RelativeLayout>
+
+
 
         </LinearLayout>
             <RelativeLayout

@@ -104,7 +104,7 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="0.5sp"
-                android:layout_height="60sp"
+                android:layout_height="80sp"
                 android:layout_toLeftOf="@+id/tv_k_cal"
                 android:layout_marginRight="10sp"
                 android:layout_marginLeft="3sp"
@@ -118,19 +118,19 @@
                 android:text="k_cal"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="5sp"
+                android:layout_marginRight="10sp"
                 android:layout_marginTop="10sp"
                 android:textColor="@android:color/darker_gray"/>
 
             <TextView
-                android:id="@+id/tv_no"
+                android:id="@+id/tv_calories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="194"
                 android:textSize="@dimen/text_size"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="5sp"
+                android:layout_marginRight="10sp"
                 android:layout_below="@id/tv_k_cal"
                 android:textStyle="bold"
                 android:layout_marginTop="8sp"

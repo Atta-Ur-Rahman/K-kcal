@@ -6,6 +6,8 @@ import android.os.Bundle;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.ui.fragment.AboutUserFragment;
 import com.techease.k_kcal.ui.fragment.AllitemFragment;
+import com.techease.k_kcal.ui.fragment.EditProfileFragment;
+import com.techease.k_kcal.ui.fragment.ProfileFragment;
 import com.techease.k_kcal.ui.fragment.WelcomeFragment;
 import com.techease.k_kcal.utilities.GeneralUtills;
 

@@ -141,13 +141,13 @@ public class VerifyCodeFragment extends Fragment {
 
                 if (response.body() == null) {
                     try {
-                        Toast.makeText(getActivity(), "Email already take", Toast.LENGTH_SHORT).show();
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
-
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else if (response.body().getStatus()) {
                     Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    GeneralUtills.connectFragment(getActivity(), new LoginFragment());
                 }
             }
 

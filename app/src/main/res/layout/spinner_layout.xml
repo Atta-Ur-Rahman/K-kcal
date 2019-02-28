@@ -7,11 +7,12 @@
 
     <TextView
         android:id="@+id/spinner_text"
-        android:layout_width="150sp"
+        android:layout_width="160sp"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="14dp"
+        android:padding="12dp"
+        android:textSize="16dp"
         android:text="Choose Category"
+        android:textColor="@android:color/darker_gray"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -117,6 +117,10 @@ public class GeneralUtills {
         return getSharedPreferences(context).getString("item_name","");
     }
 
+    public static String getItemCalories(Context context){
+        return getSharedPreferences(context).getString("calories","");
+    }
+
     public static String getPublished(Context context){
         return getSharedPreferences(context).getString("published","");
     }

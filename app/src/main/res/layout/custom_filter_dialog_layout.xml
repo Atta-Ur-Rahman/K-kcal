@@ -60,7 +60,8 @@
         android:background="@drawable/round_corner"
         android:gravity="center_vertical"
         android:paddingLeft="15sp"
-        android:hint="Location"
+        android:hint="ZipCode"
+        android:inputType="number"
         android:textSize="@dimen/text_size" />
 
 

@@ -55,8 +55,7 @@
                     android:id="@+id/rl_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20sp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="5sp">
 
 
                     <com.mikhaellopez.circularimageview.CircularImageView
@@ -72,9 +71,10 @@
 
                     <LinearLayout
                         android:id="@+id/ll_profille_tv"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20sp"
+                        android:layout_toLeftOf="@id/iv_profile_edit"
                         android:layout_toRightOf="@+id/iv_user_profile"
                         android:orientation="vertical">
 

@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.techease.k_kcal.BuildConfig;
@@ -75,12 +76,16 @@ public class RegistrationFragment extends Fragment {
     EditText etConfirmPassword;
     @BindView(R.id.iv_profile)
     ImageView ivProfile;
+    @BindView(R.id.on_board)
+    TextView tvONBoard;
     @BindView(R.id.btn_signup)
     Button btnSignUp;
+    @BindView(R.id.iv_back)
+    ImageView ivBack;
 
     boolean valid = false;
     String strFullName, strEmail, strPhone = "", strPassword, strConfirmPassword, strLatitude, strLongitude, strDeviceType;
-    File sourceFile,optionalFile;
+    File sourceFile, optionalFile;
     final int CAMERA_CAPTURE = 1;
     final int RESULT_LOAD_IMAGE = 2;
 
@@ -112,6 +117,20 @@ public class RegistrationFragment extends Fragment {
                     alertDialog.show();
                     apiCallRegistration();
                 }
+            }
+        });
+
+        tvONBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.connectFragment(getActivity(), new LoginFragment());
+            }
+        });
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtills.connectFragment(getActivity(), new SignUpFragment());
             }
         });
     }
@@ -208,8 +227,8 @@ public class RegistrationFragment extends Fragment {
         strDeviceType = "Android";
 
         if (sourceFile == null) {
-            Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.drawable.back);
-            saveImage(bitmap,"optional");
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.back);
+            saveImage(bitmap, "optional");
         } else {
 
         }
@@ -291,7 +310,7 @@ public class RegistrationFragment extends Fragment {
         cursor.moveToFirst();
         int columnIndex = cursor.getColumnIndex(projection[0]);
         String filePath = cursor.getString(columnIndex);
-        Log.d("path",filePath);
+        Log.d("path", filePath);
         ivProfile.setImageBitmap(BitmapFactory.decodeFile(filePath));
         return cursor.getString(column_index);
 
@@ -301,7 +320,7 @@ public class RegistrationFragment extends Fragment {
 
         File myDir = new File(Environment.getExternalStorageDirectory(), "Kcal");
         myDir.mkdirs();
-        String fname = image_name+ ".PNG";
+        String fname = image_name + ".PNG";
         File file = new File(myDir, fname);
         if (file.exists()) file.delete();
 
@@ -316,8 +335,8 @@ public class RegistrationFragment extends Fragment {
         }
     }
 
-    private void getOptionalFile(){
-        File path = new File(Environment.getExternalStorageDirectory(),"Kcal/optional.PNG");
+    private void getOptionalFile() {
+        File path = new File(Environment.getExternalStorageDirectory(), "Kcal/optional.PNG");
         sourceFile = path;
     }
 }

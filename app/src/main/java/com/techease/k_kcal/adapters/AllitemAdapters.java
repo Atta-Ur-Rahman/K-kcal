@@ -62,6 +62,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
         viewHolder.tvItemName.setText(model.getName());
         viewHolder.tvItemPublish.setText(model.getPublishedAt());
         viewHolder.tvItemLocation.setText(model.getLocation());
+        viewHolder.tvCalories.setText(model.getCalaries());
 
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +72,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
 //                GeneralUtills.putStringValueInEditor(context, "latitude", model.getLatitude());
 //                GeneralUtills.putStringValueInEditor(context, "longitude", model.getLongitude());
                 GeneralUtills.putStringValueInEditor(context, "published", model.getPublishedAt());
+                GeneralUtills.putStringValueInEditor(context,"calories",model.getCalaries());
                 GeneralUtills.connectFragment(context, new ResturantFragment());
 
             }
@@ -86,7 +88,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivItem, ivDetailArrow;
-        TextView tvItemName, tvItemLocation, tvItemPublish;
+        TextView tvItemName, tvItemLocation, tvItemPublish,tvCalories;
         RelativeLayout relativeLayout;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -97,6 +99,7 @@ public class AllitemAdapters extends RecyclerView.Adapter<AllitemAdapters.MyView
             tvItemPublish = itemView.findViewById(R.id.tv_published);
             ivDetailArrow = itemView.findViewById(R.id.iv_detail_arrow);
             relativeLayout = itemView.findViewById(R.id.rl_profile);
+            tvCalories = itemView.findViewById(R.id.tv_cal);
 
 
         }
