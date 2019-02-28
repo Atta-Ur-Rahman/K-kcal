@@ -8,7 +8,10 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -23,6 +26,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.techease.k_kcal.BuildConfig;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.signupdatamodels.SignUpResponseModel;
@@ -38,7 +42,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -72,8 +79,8 @@ public class RegistrationFragment extends Fragment {
     Button btnSignUp;
 
     boolean valid = false;
-    String strFullName,strEmail,strPhone="",strPassword,strConfirmPassword,strLatitude,strLongitude,strDeviceType;
-    File sourceFile;
+    String strFullName, strEmail, strPhone = "", strPassword, strConfirmPassword, strLatitude, strLongitude, strDeviceType;
+    File sourceFile,optionalFile;
     final int CAMERA_CAPTURE = 1;
     final int RESULT_LOAD_IMAGE = 2;
 
@@ -87,8 +94,8 @@ public class RegistrationFragment extends Fragment {
         return view;
     }
 
-    private void initUI(){
-        ButterKnife.bind(this,view);
+    private void initUI() {
+        ButterKnife.bind(this, view);
 
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +107,7 @@ public class RegistrationFragment extends Fragment {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(validate()){
+                if (validate()) {
                     alertDialog = AlertUtils.createProgressDialog(getActivity());
                     alertDialog.show();
                     apiCallRegistration();
@@ -143,7 +150,8 @@ public class RegistrationFragment extends Fragment {
         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, RESULT_LOAD_IMAGE);
     }
-    private void apiCallRegistration(){
+
+    private void apiCallRegistration() {
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
         final RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), sourceFile);
         final MultipartBody.Part profileImage = MultipartBody.Part.createFormData("profilePicture", sourceFile.getName(), requestFile);
@@ -157,7 +165,7 @@ public class RegistrationFragment extends Fragment {
         RequestBody phoneBody = RequestBody.create(MediaType.parse("multipart/form-data"), strLongitude);
         RequestBody deviceTypeBody = RequestBody.create(MediaType.parse("multipart/form-data"), strDeviceType);
 
-        final Call<SignUpResponseModel> resgistration = services.userSignUp(nameBody,emailBody,passwordBody,passwordBody,phoneBody,deviceTypeBody,latBody,lonBody,profileImage,Bodyname);
+        final Call<SignUpResponseModel> resgistration = services.userSignUp(nameBody, emailBody, passwordBody, passwordBody, phoneBody, deviceTypeBody, latBody, lonBody, profileImage, Bodyname);
         resgistration.enqueue(new Callback<SignUpResponseModel>() {
             @Override
             public void onResponse(Call<SignUpResponseModel> call, Response<SignUpResponseModel> response) {
@@ -170,8 +178,8 @@ public class RegistrationFragment extends Fragment {
                         Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else if (response.body().getStatus()) {
-                    GeneralUtills.putStringValueInEditor(getActivity(),"api_token",response.body().getData().getToken());
-                    GeneralUtills.withOutBackStackConnectFragment(getActivity(),new VerifyCodeFragment());
+                    GeneralUtills.putStringValueInEditor(getActivity(), "api_token", response.body().getData().getToken());
+                    GeneralUtills.withOutBackStackConnectFragment(getActivity(), new VerifyCodeFragment());
                 }
 
             }
@@ -199,11 +207,10 @@ public class RegistrationFragment extends Fragment {
         strLongitude = GeneralUtills.getLng(getActivity());
         strDeviceType = "Android";
 
-        if(sourceFile==null){
-            Toast.makeText(getActivity(), "please set your profile image", Toast.LENGTH_SHORT).show();
-            valid = false;
-        }
-        else {
+        if (sourceFile == null) {
+            Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.drawable.back);
+            saveImage(bitmap,"optional");
+        } else {
 
         }
 
@@ -221,12 +228,6 @@ public class RegistrationFragment extends Fragment {
             etEmail.setError(null);
         }
 
-//        if (strPhone.isEmpty()) {
-//            etPhone.setError("enter a valid phone number");
-//            valid = false;
-//        } else {
-//            etPhone.setError(null);
-//        }
 
         if (strConfirmPassword.isEmpty()) {
             etConfirmPassword.setError("enter a valid password");
@@ -290,8 +291,33 @@ public class RegistrationFragment extends Fragment {
         cursor.moveToFirst();
         int columnIndex = cursor.getColumnIndex(projection[0]);
         String filePath = cursor.getString(columnIndex);
+        Log.d("path",filePath);
         ivProfile.setImageBitmap(BitmapFactory.decodeFile(filePath));
         return cursor.getString(column_index);
 
+    }
+
+    private void saveImage(Bitmap finalBitmap, String image_name) {
+
+        File myDir = new File(Environment.getExternalStorageDirectory(), "Kcal");
+        myDir.mkdirs();
+        String fname = image_name+ ".PNG";
+        File file = new File(myDir, fname);
+        if (file.exists()) file.delete();
+
+        try {
+            FileOutputStream out = new FileOutputStream(file);
+            finalBitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+            out.flush();
+            out.close();
+            getOptionalFile();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getOptionalFile(){
+        File path = new File(Environment.getExternalStorageDirectory(),"Kcal/optional.PNG");
+        sourceFile = path;
     }
 }
