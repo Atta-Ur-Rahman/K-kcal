@@ -42,6 +42,9 @@ public class ItemDetailModel {
     @SerializedName("category_id")
     @Expose
     private String categoryId;
+    @SerializedName("zipCode")
+    @Expose
+    private String zipCode;
     @SerializedName("distance")
     @Expose
     private Integer distance;
@@ -152,6 +155,14 @@ public class ItemDetailModel {
 
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public Integer getDistance() {

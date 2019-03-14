@@ -76,6 +76,8 @@ public class RegistrationFragment extends Fragment {
     EditText etConfirmPassword;
     @BindView(R.id.iv_profile)
     ImageView ivProfile;
+    @BindView(R.id.et_country)
+    EditText etCountry;
     @BindView(R.id.on_board)
     TextView tvONBoard;
     @BindView(R.id.btn_signup)
@@ -84,7 +86,7 @@ public class RegistrationFragment extends Fragment {
     ImageView ivBack;
 
     boolean valid = false;
-    String strFullName, strEmail, strPhone = "", strPassword, strConfirmPassword, strLatitude, strLongitude, strDeviceType;
+    String strFullName, strEmail, strPhone = "", strPassword, strConfirmPassword, strLatitude, strLongitude, strDeviceType, strCountry;
     File sourceFile, optionalFile;
     final int CAMERA_CAPTURE = 1;
     final int RESULT_LOAD_IMAGE = 2;
@@ -183,8 +185,9 @@ public class RegistrationFragment extends Fragment {
         RequestBody lonBody = RequestBody.create(MediaType.parse("multipart/form-data"), strLatitude);
         RequestBody phoneBody = RequestBody.create(MediaType.parse("multipart/form-data"), strLongitude);
         RequestBody deviceTypeBody = RequestBody.create(MediaType.parse("multipart/form-data"), strDeviceType);
+        RequestBody countryBody = RequestBody.create(MediaType.parse("multipart/form-data"), strCountry);
 
-        final Call<SignUpResponseModel> resgistration = services.userSignUp(nameBody, emailBody, passwordBody, passwordBody, phoneBody, deviceTypeBody, latBody, lonBody, profileImage, Bodyname);
+        final Call<SignUpResponseModel> resgistration = services.userSignUp(nameBody, emailBody, passwordBody, passwordBody, phoneBody, deviceTypeBody, latBody, lonBody, profileImage, countryBody, Bodyname);
         resgistration.enqueue(new Callback<SignUpResponseModel>() {
             @Override
             public void onResponse(Call<SignUpResponseModel> call, Response<SignUpResponseModel> response) {
@@ -218,10 +221,11 @@ public class RegistrationFragment extends Fragment {
         valid = true;
 
         strFullName = etFullName.getText().toString();
-        strEmail = etEmail.getText().toString();
+        strEmail = etEmail.getText().toString().trim();
         strPhone = etPhone.getText().toString();
-        strPassword = etPassword.getText().toString();
-        strConfirmPassword = etConfirmPassword.getText().toString();
+        strCountry = etCountry.getText().toString().trim();
+        strPassword = etPassword.getText().toString().trim();
+        strConfirmPassword = etConfirmPassword.getText().toString().trim();
         strLatitude = GeneralUtills.getLat(getActivity());
         strLongitude = GeneralUtills.getLng(getActivity());
         strDeviceType = "Android";
@@ -245,6 +249,13 @@ public class RegistrationFragment extends Fragment {
             valid = false;
         } else {
             etEmail.setError(null);
+        }
+
+        if (strCountry.isEmpty()) {
+            etCountry.setError("enter country name");
+            valid = false;
+        } else {
+            etCountry.setError(null);
         }
 
 

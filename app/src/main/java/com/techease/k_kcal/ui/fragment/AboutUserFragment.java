@@ -24,6 +24,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.techease.k_kcal.R;
+import com.techease.k_kcal.adapters.CustomSpinnerAdapter;
 import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.moreinfoDataModel.MoreInfoProfileModel;
@@ -95,14 +96,13 @@ public class AboutUserFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
         lifeStyleList = Arrays.asList(getResources().getStringArray(R.array.lifestyle_array));
-        lifeStyleArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_layout, R.id.spinner_text, lifeStyleList);
-        spLifeStyle.setAdapter(lifeStyleArrayAdapter);
+       // lifeStyleArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_layout, R.id.spinner_text, lifeStyleList);
+        spLifeStyle.setAdapter(new CustomSpinnerAdapter(getActivity(), R.layout.spinner_layout, getActivity().getResources().getStringArray(R.array.lifestyle_array), "Life Style"));
 
         spLifeStyle.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 strLifeStyle = spLifeStyle.getSelectedItem().toString();
-
             }
 
             @Override

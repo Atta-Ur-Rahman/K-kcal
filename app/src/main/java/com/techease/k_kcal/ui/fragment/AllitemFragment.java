@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -78,7 +79,7 @@ public class AllitemFragment extends Fragment {
     ArrayList<String> categoryItemArrayList = new ArrayList<>();
     ArrayAdapter<String> categoryItemArrayAdapter;
 
-    String token, strCategoryItem, strPriceRange, strDistance;
+    String token, strCategoryItem, strPriceRange, strDistance, strZipCode;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -134,7 +135,12 @@ public class AllitemFragment extends Fragment {
             public void onResponse(Call<ItemResponseModel> call, Response<ItemResponseModel> response) {
                 alertDialog.dismiss();
                 if (response.body() == null) {
-                    Toast.makeText(getActivity(), "no data", Toast.LENGTH_SHORT).show();
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 } else if (response.body().getStatus()) {
 
                     itemDataModelList.addAll(response.body().getData());
@@ -206,7 +212,7 @@ public class AllitemFragment extends Fragment {
 
     private void apiCallFilterItems() {
         ApiInterface services = ApiClient.getApiClient(token).create(ApiInterface.class);
-        Call<ItemResponseModel> allUsers = services.getFiltersItems(strPriceRange, strCategoryItem, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
+        Call<ItemResponseModel> allUsers = services.getFiltersItems(strPriceRange, strCategoryItem, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()), "111120", strZipCode);
         allUsers.enqueue(new Callback<ItemResponseModel>() {
             @Override
             public void onResponse(Call<ItemResponseModel> call, Response<ItemResponseModel> response) {
@@ -245,10 +251,13 @@ public class AllitemFragment extends Fragment {
         spinner = dialog.findViewById(R.id.spinner_choose_category);
         seekBarPrice = dialog.findViewById(R.id.sb_price);
         seekBarDistance = dialog.findViewById(R.id.sb_distance);
+        final EditText etZipCode = dialog.findViewById(R.id.et_zip_code);
         final TextView tvSeekPrice = dialog.findViewById(R.id.tv_seekbar_price);
         final TextView tvSeekMiles = dialog.findViewById(R.id.tv_seekbar_miles);
         final Button btnAppluFilter = dialog.findViewById(R.id.btn_apply_filter);
         final ImageView ivClose = dialog.findViewById(R.id.iv_dialog_close);
+
+        strZipCode = etZipCode.getText().toString();
 
 
         categoryItemArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_layout, R.id.spinner_text, categoryItemArrayList);
@@ -287,6 +296,7 @@ public class AllitemFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tvSeekMiles.setText(String.valueOf(progress + "Kcals"));
+                strDistance = String.valueOf(progress);
             }
 
             @Override

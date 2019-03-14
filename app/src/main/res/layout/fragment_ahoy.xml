@@ -18,6 +18,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -30,6 +31,7 @@
                     android:layout_marginTop="20sp"
                     android:gravity="center"
                     android:text="Ahoy!"
+                    android:fontFamily="@font/poppins_regular"
                     android:textSize="@dimen/title_text_size" />
 
                 <LinearLayout
@@ -60,126 +62,88 @@
                 </LinearLayout>
 
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:id="@+id/et_fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:theme="@style/Theme.AppCompat"
-                    app:hintAnimationEnabled="false"
-                    app:hintEnabled="false">
-
-                    <EditText
-                        android:id="@+id/et_fullname"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Full Name"
-                        android:inputType="textPersonName"
-                        android:paddingLeft="10sp"
-                        android:paddingBottom="20sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHint="@android:color/darker_gray"
-                        android:textCursorDrawable="@drawable/cursor_color"
-                        app:backgroundTint="@android:color/darker_gray" />
-
-                </android.support.design.widget.TextInputLayout>
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:theme="@style/Theme.AppCompat"
-                    app:hintAnimationEnabled="false"
-                    app:hintEnabled="false">
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
-                    <EditText
-                        android:id="@+id/et_email"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Email Address"
-                        android:inputType="textEmailAddress"
-                        android:paddingLeft="10sp"
-                        android:paddingBottom="20sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHint="@android:color/darker_gray"
-                        android:textCursorDrawable="@drawable/cursor_color"
-                        app:backgroundTint="@android:color/darker_gray" />
 
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:id="@+id/et_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:theme="@style/Theme.AppCompat"
-                    app:hintAnimationEnabled="false"
-                    app:hintEnabled="false">
+                    android:hint="Phone N0."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
-                    <EditText
-                        android:id="@+id/et_phone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Phone N0."
-                        android:inputType="textEmailAddress"
-                        android:paddingLeft="10sp"
-                        android:paddingBottom="20sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHint="@android:color/darker_gray"
-                        android:textCursorDrawable="@drawable/cursor_color"
-                        app:backgroundTint="@android:color/darker_gray" />
 
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:id="@+id/et_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:theme="@style/Theme.AppCompat"
-                    app:hintAnimationEnabled="false"
-                    app:hintEnabled="false">
+                    android:hint="Country"
+                    android:inputType="text"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
-                    <EditText
-                        android:id="@+id/et_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Password"
-                        android:inputType="textPassword"
-                        android:paddingLeft="10sp"
-                        android:paddingBottom="20sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHint="@android:color/darker_gray"
-                        android:textCursorDrawable="@drawable/cursor_color"
-                        app:backgroundTint="@android:color/darker_gray" />
 
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:theme="@style/Theme.AppCompat"
-                    app:hintAnimationEnabled="false"
-                    app:hintEnabled="false">
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
-                    <EditText
-                        android:id="@+id/et_confirm_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Confirm password"
-                        android:inputType="textPassword"
-                        android:paddingLeft="10sp"
-                        android:paddingBottom="20sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textColorHint="@android:color/darker_gray"
-                        android:textCursorDrawable="@drawable/cursor_color"
-                        app:backgroundTint="@android:color/darker_gray" />
 
-                </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    app:backgroundTint="@android:color/darker_gray" />
 
 
                 <TextView
@@ -208,6 +172,7 @@
         android:layout_width="match_parent"
         android:layout_height="1sp"
         android:background="@android:color/darker_gray" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0sp"
@@ -243,8 +208,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="100sp"
-                android:text="Sign Up"
                 android:background="@null"
+                android:text="Sign Up"
+                android:fontFamily="@font/poppins_regular"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="18sp"
                 android:textStyle="bold" />

@@ -60,8 +60,8 @@
         android:background="@drawable/round_corner"
         android:gravity="center_vertical"
         android:paddingLeft="15sp"
-        android:hint="ZipCode"
-        android:inputType="number"
+        android:hint="Postcode/zipcode"
+        android:inputType="text"
         android:textSize="@dimen/text_size" />
 
 
@@ -145,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="$ 10"
+            android:text="£ 10"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size"
             android:textStyle="bold" />

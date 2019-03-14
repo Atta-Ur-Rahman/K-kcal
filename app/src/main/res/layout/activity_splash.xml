@@ -11,9 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:fontFamily="@font/bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100sp"/>
 

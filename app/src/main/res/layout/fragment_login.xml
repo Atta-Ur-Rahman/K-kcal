@@ -30,6 +30,7 @@
                     android:layout_marginTop="@dimen/logo_margin_top"
                     android:gravity="center"
                     android:text="Login"
+                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/title_text_size"
                     android:textStyle="bold" />
@@ -201,6 +202,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="100sp"
                         android:text="Login"
+                        android:fontFamily="@font/poppins_regular"
                         android:textColor="@android:color/holo_red_light"
                         android:textSize="18sp"
                         android:textStyle="bold" />

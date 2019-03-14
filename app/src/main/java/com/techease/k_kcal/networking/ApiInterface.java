@@ -52,7 +52,8 @@ public interface ApiInterface {
                                          @Part("latitude") RequestBody lat,
                                          @Part("longitude") RequestBody lon,
                                          @Part MultipartBody.Part photo,
-                                         @Part("profilePicture") RequestBody fileName);
+                                         @Part("profilePicture") RequestBody fileName,
+                                         @Part("country") RequestBody country);
 
     @FormUrlEncoded
     @POST("verifyCode")
@@ -87,7 +88,9 @@ public interface ApiInterface {
     Call<ItemResponseModel> getFiltersItems(@Field("price") String category,
                                             @Field("category") String price,
                                             @Field("latitude") String lat,
-                                            @Field("longitude") String lng);
+                                            @Field("longitude") String lng,
+                                            @Field("distance") String distance,
+                                            @Field("zipCode") String zipcode);
 
 
     @FormUrlEncoded
