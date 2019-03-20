@@ -13,6 +13,7 @@ import com.techease.k_kcal.models.profileUpdateDataModel.ProfileImageResponseMod
 import com.techease.k_kcal.models.profileUpdateDataModel.ProfileUpdateResponseModel;
 import com.techease.k_kcal.models.resendCodeDataModel.ResendCodeModel;
 import com.techease.k_kcal.models.signupdatamodels.SignUpResponseModel;
+import com.techease.k_kcal.models.socialLoginModel.SocialResponseModel;
 import com.techease.k_kcal.models.travelDataModel.TravelReponseModel;
 import com.techease.k_kcal.models.verifiyDataModels.VerifyResponseModel;
 
@@ -40,6 +41,12 @@ public interface ApiInterface {
                                        @Field("password") String password,
                                        @Field("latitude") String latitude,
                                        @Field("longitude") String longitude);
+
+    @FormUrlEncoded
+    @POST("socialLogin")
+    Call<SocialResponseModel> socialLogin(@Field("email") String email,
+                                          @Field("latitude") String latitude,
+                                          @Field("longitude") String longitude);
 
     @Multipart
     @POST("register")
