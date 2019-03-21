@@ -38,15 +38,34 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/facebook" />
+                android:layout_marginTop="3sp">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fb_login_button"
+                    android:layout_width="42sp"
+                    android:layout_height="42sp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/facebook" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/facebook" />
+            </FrameLayout>
+
 
             <ImageView
+                android:id="@+id/sign_in_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/google" />
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/google" />
 
             <ImageView
                 android:layout_width="wrap_content"

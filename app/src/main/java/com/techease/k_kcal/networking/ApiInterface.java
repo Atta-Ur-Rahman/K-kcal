@@ -1,5 +1,6 @@
 package com.techease.k_kcal.networking;
 
+import com.techease.k_kcal.models.SocialSignUpResponseModel;
 import com.techease.k_kcal.models.filterDataModels.ItemCategoriesModel;
 import com.techease.k_kcal.models.forgotDataModels.ChangePasswordModel;
 import com.techease.k_kcal.models.forgotDataModels.ForgotPasswordModel;
@@ -62,6 +63,18 @@ public interface ApiInterface {
                                          @Part("profilePicture") RequestBody fileName,
                                          @Part("country") RequestBody country);
 
+    @Multipart
+    @POST("socialSingup")
+    Call<SocialSignUpResponseModel> socialSignUp(@Part("name") RequestBody name,
+                                                 @Part("email") RequestBody email,
+                                                 @Part("sinupType") RequestBody sinupType,
+                                                 @Part("latitude") RequestBody lat,
+                                                 @Part("longitude") RequestBody lon,
+                                                 @Part("country") RequestBody country,
+                                                 @Part MultipartBody.Part photo,
+                                                 @Part("profilePicture") RequestBody fileName,
+                                                 @Part("deviceType") RequestBody deviceType);
+
     @FormUrlEncoded
     @POST("verifyCode")
     Call<VerifyResponseModel> userVerification(@Field("code") String code);
@@ -90,6 +103,7 @@ public interface ApiInterface {
     @POST("updateProfilePicture")
     Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
                                                          @Part("profilePicture") RequestBody fileName);
+
     @FormUrlEncoded
     @POST("getItems/search")
     Call<ItemResponseModel> getFiltersItems(@Field("price") String category,
@@ -127,7 +141,6 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("addTravelInfo")
     Call<TravelReponseModel> travelInfo(@Field("travel") String walk);
-
 
 
     //use this for query request

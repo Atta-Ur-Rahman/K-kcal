@@ -23,13 +23,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.logindatamodels.LoginResponseModel;
 import com.techease.k_kcal.models.socialLoginModel.SocialResponseModel;
@@ -56,7 +64,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment  {
     private String TAG = "LoginFragment";
     Unbinder unbinder;
     AlertDialog alertDialog;
@@ -73,13 +81,19 @@ public class LoginFragment extends Fragment {
     TextView tvForgotPaswword;
     @BindView(R.id.btn_fb)
     ImageView btnFacebook;
+    @BindView(R.id.sign_in_button)
+    ImageView signInButton;
 
     Boolean valid = false;
-    String strEmail, strPassword;
+    String strName, strEmail, strPassword;
 
     CallbackManager callbackManager;
     private LoginButton loginButton;
     private static final String EMAIL = "email";
+    private GoogleSignInOptions gso;
+    private GoogleSignInClient mGoogleSignInClient;
+    private GoogleSignInAccount account;
+    private static final int RC_SIGN_IN = 200;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -107,10 +121,9 @@ public class LoginFragment extends Fragment {
                             @Override
                             public void onCompleted(JSONObject object, GraphResponse response) {
                                 try {
-                                    strEmail = object.getString("email");
                                     alertDialog = AlertUtils.createProgressDialog(getActivity());
                                     alertDialog.show();
-                                    socialLoginApiCall();
+                                    socialLoginApiCall(object.getString("email"));
 
 
                                 } catch (JSONException e) {
@@ -137,6 +150,21 @@ public class LoginFragment extends Fragment {
                     }
                 });
                 //end
+            }
+        });
+
+        //google Sign in code
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                        .requestEmail()
+                        .build();
+                mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+                account = GoogleSignIn.getLastSignedInAccount(getActivity());
+                updateUI(account);
+                signIn();
             }
         });
         return view;
@@ -170,6 +198,12 @@ public class LoginFragment extends Fragment {
         });
     }
 
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+
     private void userLogin() {
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
         Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
@@ -202,32 +236,11 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    private Bundle getFacebookData(JSONObject object) {
-
-        try {
-            Bundle bundle = new Bundle();
-            String id = object.getString("id");
-            try {
-                URL profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
-                Log.i(TAG, profile_pic + "");
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                Log.d(TAG, String.valueOf(e.getCause()));
-                return null;
-            }
-
-            return bundle;
-        } catch (JSONException e) {
-            Log.d(TAG, "Error parsing JSON");
-        }
-        return null;
-    }
-
     //networking call for social login
-    private void socialLoginApiCall() {
-        Toast.makeText(getActivity(), strEmail, Toast.LENGTH_SHORT).show();
+    private void socialLoginApiCall(String email) {
+        Toast.makeText(getActivity(), email, Toast.LENGTH_SHORT).show();
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<SocialResponseModel> userLogin = services.socialLogin(strEmail, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
+        Call<SocialResponseModel> userLogin = services.socialLogin(email, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
         userLogin.enqueue(new Callback<SocialResponseModel>() {
             @Override
             public void onResponse(Call<SocialResponseModel> call, Response<SocialResponseModel> response) {
@@ -261,6 +274,34 @@ public class LoginFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            updateUI(account);
+        } catch (ApiException e) {
+            updateUI(null);
+        }
+    }
+
+    private void updateUI(GoogleSignInAccount account) {
+
+        if (account != null) {
+            Log.d("zma",account.getEmail());
+            alertDialog = AlertUtils.createProgressDialog(getActivity());
+            alertDialog.show();
+            strName = account.getDisplayName();
+            socialLoginApiCall(account.getEmail());
+
+        } else {
+            Log.d("googleError", "you got some error");
+        }
     }
 
     private boolean validate() {
