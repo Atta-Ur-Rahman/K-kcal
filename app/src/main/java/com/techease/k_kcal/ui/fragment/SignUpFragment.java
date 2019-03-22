@@ -78,8 +78,10 @@ public class SignUpFragment extends Fragment {
     ImageView signInButton;
 
     Boolean valid = false;
-    String strImage;
+    String strImage, strName, strEmail;
     File sourceFile;
+    URL url = null;
+    Bitmap bitmap = null;
 
     CallbackManager callbackManager;
     private LoginButton loginButton;
@@ -95,6 +97,8 @@ public class SignUpFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_sign_up_, container, false);
         unbinder = ButterKnife.bind(this, view);
+        GeneralUtills.grantPermission(getActivity());
+        strictModePolicy();
         loginButton = view.findViewById(R.id.fb_login_button);
         callbackManager = CallbackManager.Factory.create();
         loginButton.setReadPermissions(Arrays.asList(EMAIL));
@@ -141,21 +145,30 @@ public class SignUpFragment extends Fragment {
         });
 
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .requestProfile()
+                .requestId()
+                .requestIdToken(getResources().getString(R.string.client_id))
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                        .requestEmail()
-                        .build();
-                mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
-                account = GoogleSignIn.getLastSignedInAccount(getActivity());
-                updateUI(account);
                 signIn();
             }
         });
 
         return view;
     }
+
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getActivity());
+//        updateUI(account);
+//    }
+
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -163,7 +176,6 @@ public class SignUpFragment extends Fragment {
 
     private void initUI() {
         ButterKnife.bind(this, view);
-        stictModePolicy();
 
         btnSignUpWithEmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,14 +199,13 @@ public class SignUpFragment extends Fragment {
             String id = object.getString("id");
             try {
                 URL profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
-                try {
-                    URL url = new URL(String.valueOf(profile_pic));
-                    Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                    saveImage(bitmap, "social");
-                } catch (IOException e) {
-                    System.out.println(e);
+                strImage = String.valueOf(profile_pic);
+                strName = object.getString("name");
+                strEmail = object.getString("email");
+                if (validate()) {
+                    socialSignupApiCall("facebook");
                 }
-                socialSignupApiCall(object.getString("name"), object.getString("email"), "facebook");
+
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -222,6 +233,7 @@ public class SignUpFragment extends Fragment {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             updateUI(account);
         } catch (ApiException e) {
+            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
             updateUI(null);
         }
     }
@@ -229,31 +241,29 @@ public class SignUpFragment extends Fragment {
     private void updateUI(GoogleSignInAccount account) {
 
         if (account != null) {
-            Log.d("zma",account.getPhotoUrl().toString());
-            alertDialog = AlertUtils.createProgressDialog(getActivity());
-            alertDialog.show();
-            try {
-                URL url = new URL(account.getPhotoUrl().toString());
-                Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                saveImage(bitmap, "social");
-            } catch (IOException e) {
-                System.out.println(e);
+            strName = account.getDisplayName();
+            if(null != account.getPhotoUrl()){
+                strImage = account.getPhotoUrl().toString();
             }
-           // socialSignupApiCall(account.getDisplayName(), account.getEmail(), "google");
+            strEmail = account.getEmail();
+            if (validate()) {
+                alertDialog = AlertUtils.createProgressDialog(getActivity());
+                alertDialog.show();
+                socialSignupApiCall("google");
+            }
 
         } else {
             Log.d("googleError", "you got some error");
         }
     }
 
-    private void socialSignupApiCall(String name, String email, String strSignupType) {
-        Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
+    private void socialSignupApiCall(String strSignupType) {
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
         final RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), sourceFile);
         final MultipartBody.Part profileImage = MultipartBody.Part.createFormData("profilePicture", sourceFile.getName(), requestFile);
         RequestBody Bodyname = RequestBody.create(MediaType.parse("text/plain"), "upload_test");
-        RequestBody nameBody = RequestBody.create(MediaType.parse("multipart/form-data"), name);
-        RequestBody emailBody = RequestBody.create(MediaType.parse("multipart/form-data"), email);
+        RequestBody nameBody = RequestBody.create(MediaType.parse("multipart/form-data"), strName);
+        RequestBody emailBody = RequestBody.create(MediaType.parse("multipart/form-data"), strEmail);
         RequestBody signupType = RequestBody.create(MediaType.parse("multipart/form-data"), strSignupType);
         RequestBody latBody = RequestBody.create(MediaType.parse("multipart/form-data"), GeneralUtills.getLat(getActivity()));
         RequestBody lonBody = RequestBody.create(MediaType.parse("multipart/form-data"), GeneralUtills.getLat(getActivity()));
@@ -291,9 +301,43 @@ public class SignUpFragment extends Fragment {
         });
     }
 
+    private boolean validate() {
+        valid = true;
+
+        if (sourceFile == null) {
+            try {
+                url = new URL(strImage);
+                bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                saveImage(bitmap, "profile");
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Log.d(TAG, "ok");
+        }
+
+        if (strName.isEmpty()) {
+            Log.d(TAG, "you name is empty");
+            valid = false;
+        } else {
+            Log.d(TAG, "ok");
+        }
+
+        if (strEmail.isEmpty()) {
+            Log.d(TAG, "you email is empty");
+            valid = false;
+        } else {
+            Log.d(TAG, "ok");
+        }
+
+        return valid;
+    }
+
     private void saveImage(Bitmap finalBitmap, String image_name) {
 
-        File myDir = new File(Environment.getExternalStorageDirectory(), "kkcal");
+        File myDir = new File(Environment.getExternalStorageDirectory(), "Khan");
         myDir.mkdirs();
         String fname = image_name + ".PNG";
         File file = new File(myDir, fname);
@@ -301,21 +345,21 @@ public class SignUpFragment extends Fragment {
 
         try {
             FileOutputStream out = new FileOutputStream(file);
-            finalBitmap.compress(Bitmap.CompressFormat.PNG, 80, out);
+            finalBitmap.compress(Bitmap.CompressFormat.PNG, 70, out);
             out.flush();
             out.close();
-            getOptionalFile();
+            getImage();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void getOptionalFile() {
-        File path = new File(Environment.getExternalStorageDirectory(), "kkcal/social.PNG");
-        sourceFile = path;
+    private void getImage() {
+        sourceFile = new File(Environment.getExternalStorageDirectory(), "Khan/profile.PNG");
     }
 
-    private void stictModePolicy() {
+
+    private void strictModePolicy() {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

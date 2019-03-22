@@ -154,21 +154,19 @@ public class LoginFragment extends Fragment  {
         });
 
         //google Sign in code
-
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                        .requestEmail()
-                        .build();
-                mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
-                account = GoogleSignIn.getLastSignedInAccount(getActivity());
-                updateUI(account);
                 signIn();
             }
         });
         return view;
     }
+
 
     private void initUI() {
 
@@ -293,7 +291,6 @@ public class LoginFragment extends Fragment  {
     private void updateUI(GoogleSignInAccount account) {
 
         if (account != null) {
-            Log.d("zma",account.getEmail());
             alertDialog = AlertUtils.createProgressDialog(getActivity());
             alertDialog.show();
             strName = account.getDisplayName();

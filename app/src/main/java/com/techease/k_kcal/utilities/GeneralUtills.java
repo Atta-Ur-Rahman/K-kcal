@@ -132,6 +132,7 @@ public class GeneralUtills {
     public static void grantPermission(Activity  context){
         Dexter.withActivity(context)
                 .withPermissions(
+                        Manifest.permission.INTERNET,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.READ_EXTERNAL_STORAGE
                 ).withListener(new MultiplePermissionsListener() {

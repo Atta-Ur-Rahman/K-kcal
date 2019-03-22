@@ -16,7 +16,7 @@
            android:id="@+id/mapView"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:apiKey="AIzaSyD0u3ThIGMVgW0KS0t8shkm9Qr_OVwrRiw">
+           android:apiKey="AIzaSyD8YZBFh8_8q01B8bra2uWwmtm4cs8DNFI">
        </com.google.android.gms.maps.MapView>
 
    </FrameLayout>

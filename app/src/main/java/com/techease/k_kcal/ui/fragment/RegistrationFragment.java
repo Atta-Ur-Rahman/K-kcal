@@ -231,7 +231,7 @@ public class RegistrationFragment extends Fragment {
         strDeviceType = "Android";
 
         if (sourceFile == null) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.back);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.profile);
             saveImage(bitmap, "optional");
         } else {
 
