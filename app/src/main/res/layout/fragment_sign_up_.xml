@@ -68,6 +68,15 @@
                 android:layout_marginLeft="20sp"
                 android:background="@mipmap/google" />
 
+            <ImageView
+                android:id="@+id/iv_fb_profile"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20sp"
+                android:visibility="invisible"
+                android:background="@drawable/profile" />
+
         </LinearLayout>
 
         <TextView

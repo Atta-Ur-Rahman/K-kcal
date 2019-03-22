@@ -129,6 +129,10 @@ public class GeneralUtills {
         return getSharedPreferences(context).getString("item_image","");
     }
 
+    public static String getFacebookImage(Context context){
+        return getSharedPreferences(context).getString("facebook_profile","");
+    }
+
     public static void grantPermission(Activity  context){
         Dexter.withActivity(context)
                 .withPermissions(
