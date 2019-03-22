@@ -236,7 +236,6 @@ public class LoginFragment extends Fragment  {
 
     //networking call for social login
     private void socialLoginApiCall(String email) {
-        Toast.makeText(getActivity(), email, Toast.LENGTH_SHORT).show();
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
         Call<SocialResponseModel> userLogin = services.socialLogin(email, GeneralUtills.getLat(getActivity()), GeneralUtills.getLng(getActivity()));
         userLogin.enqueue(new Callback<SocialResponseModel>() {

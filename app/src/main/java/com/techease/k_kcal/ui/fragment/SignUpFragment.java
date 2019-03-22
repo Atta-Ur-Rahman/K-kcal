@@ -1,7 +1,6 @@
 package com.techease.k_kcal.ui.fragment;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,11 +18,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -100,8 +101,8 @@ public class SignUpFragment extends Fragment {
         GeneralUtills.grantPermission(getActivity());
         strictModePolicy();
         loginButton = view.findViewById(R.id.fb_login_button);
+        loginButton.setReadPermissions(Arrays.asList("email", "public_profile"));
         callbackManager = CallbackManager.Factory.create();
-        loginButton.setReadPermissions(Arrays.asList(EMAIL));
         loginButton.setFragment(this);
         initUI();
 
@@ -114,12 +115,27 @@ public class SignUpFragment extends Fragment {
                 loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
+                        AccessToken accessToken = loginResult.getAccessToken();
 
                         final GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                             @Override
                             public void onCompleted(JSONObject object, GraphResponse response) {
-                                getFacebookData(object);
+                                try {
+                                    strName = object.getString("first_name") + object.getString("last_name");
+                                    strEmail = object.getString("email");
+                                    Bundle bundle = getFacebookData(object);
 
+                                    if (validate()) {
+                                        alertDialog = AlertUtils.createProgressDialog(getActivity());
+                                        alertDialog.show();
+                                        socialSignupApiCall("facebook");
+                                    }
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    Log.d("zmaFbE", e.getMessage().toString());
+                                }
                             }
                         });
                         Bundle parameters = new Bundle();
@@ -144,7 +160,6 @@ public class SignUpFragment extends Fragment {
             }
         });
 
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .requestProfile()
@@ -162,12 +177,6 @@ public class SignUpFragment extends Fragment {
         return view;
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getActivity());
-//        updateUI(account);
-//    }
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -193,28 +202,25 @@ public class SignUpFragment extends Fragment {
     }
 
 
-    private void getFacebookData(JSONObject object) {
+    private Bundle getFacebookData(JSONObject object) {
 
         try {
+            Bundle bundle = new Bundle();
             String id = object.getString("id");
             try {
                 URL profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
                 strImage = String.valueOf(profile_pic);
-                strName = object.getString("name");
-                strEmail = object.getString("email");
-                if (validate()) {
-                    socialSignupApiCall("facebook");
-                }
-
-
             } catch (MalformedURLException e) {
                 e.printStackTrace();
-                Log.d(TAG, String.valueOf(e.getCause()));
+                Log.d("zmaE", String.valueOf(e.getCause()));
+                return null;
             }
 
+            return bundle;
         } catch (JSONException e) {
-            Log.d(TAG, "Error parsing JSON");
+            Log.d("Error", "Error parsing JSON");
         }
+        return null;
     }
 
     @Override
@@ -242,7 +248,7 @@ public class SignUpFragment extends Fragment {
 
         if (account != null) {
             strName = account.getDisplayName();
-            if(null != account.getPhotoUrl()){
+            if (null != account.getPhotoUrl()) {
                 strImage = account.getPhotoUrl().toString();
             }
             strEmail = account.getEmail();
