@@ -2,12 +2,15 @@ package com.techease.k_kcal.ui.fragment;
 
 
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
@@ -24,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -31,27 +35,36 @@ import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
+import com.facebook.Profile;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.facebook.login.widget.ProfilePictureView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.SocialSignUpResponseModel;
 import com.techease.k_kcal.networking.ApiClient;
 import com.techease.k_kcal.networking.ApiInterface;
 import com.techease.k_kcal.utilities.AlertUtils;
+import com.techease.k_kcal.utilities.FlushedInputStream;
 import com.techease.k_kcal.utilities.GeneralUtills;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
@@ -75,7 +88,7 @@ public class SignUpFragment extends Fragment {
     AlertDialog alertDialog;
     View view;
     @BindView(R.id.iv_fb_profile)
-    ImageView ivFbProfile;
+    ImageView profilePictureView;
     @BindView(R.id.btn_signup_email)
     Button btnSignUpWithEmail;
     @BindView(R.id.tv_already_login)
@@ -88,14 +101,12 @@ public class SignUpFragment extends Fragment {
 
     Boolean valid = false;
     String strImage, strName, strEmail;
+    Bitmap bitmap;
     File sourceFile;
 
     CallbackManager callbackManager;
     private LoginButton loginButton;
-    private static final String EMAIL = "email";
-    private GoogleSignInOptions gso;
     private GoogleSignInClient mGoogleSignInClient;
-    private GoogleSignInAccount account;
     private static final int RC_SIGN_IN = 100;
 
     @Override
@@ -107,21 +118,19 @@ public class SignUpFragment extends Fragment {
         GeneralUtills.grantPermission(getActivity());
         strictModePolicy();
         loginButton = view.findViewById(R.id.fb_login_button);
-        loginButton.setReadPermissions(Arrays.asList("email", "public_profile"));
+        loginButton.setReadPermissions(Arrays.asList("email"));
         callbackManager = CallbackManager.Factory.create();
         loginButton.setFragment(this);
         initUI();
-
 
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loginButton.performClick();
 
-                // Callback registration for facebook login
                 loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                     @Override
-                    public void onSuccess(LoginResult loginResult) {
+                    public void onSuccess(final LoginResult loginResult) {
 
                         final GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                             @Override
@@ -130,27 +139,8 @@ public class SignUpFragment extends Fragment {
                                     strName = object.getString("first_name") + object.getString("last_name");
                                     strEmail = object.getString("email");
                                     String id = object.getString("id");
-                                    URL profile_pic = null;
-                                    try {
-//                                        profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
-
-                                        URL url = new URL("https://graph.facebook.com/" + id + "/picture?width=160&height=160");
-                                        Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-
-                                        Toast toast = new Toast(getActivity());
-                                        ImageView view = new ImageView(getActivity());
-                                        view.setImageBitmap(bmp);
-                                        toast.setView(view);
-                                        toast.show();
-
-                                        strImage = String.valueOf(profile_pic);
-                                        Glide.with(getActivity()).load(strImage).into(ivFbProfile);
-                                    } catch (MalformedURLException e) {
-                                        e.printStackTrace();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-
+                                    strImage = "https://graph.facebook.com/"+id+"/picture?type=normal";
+                                    new Async().execute(strImage);
 
                                     if (validate()) {
                                         alertDialog = AlertUtils.createProgressDialog(getActivity());
@@ -205,7 +195,6 @@ public class SignUpFragment extends Fragment {
     }
 
 
-
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -254,10 +243,11 @@ public class SignUpFragment extends Fragment {
 
         if (account != null) {
             strName = account.getDisplayName();
-            if (null != account.getPhotoUrl()) {
-                strImage = account.getPhotoUrl().toString();
-            }
             strEmail = account.getEmail();
+            if (null != account.getPhotoUrl()) {
+                new Async().execute(account.getPhotoUrl().toString());
+            }
+
             if (validate()) {
                 alertDialog = AlertUtils.createProgressDialog(getActivity());
                 alertDialog.show();
@@ -270,10 +260,6 @@ public class SignUpFragment extends Fragment {
     }
 
     private void socialSignupApiCall(String strSignupType) {
-        if (sourceFile == null) {
-            sourceFile = new File(Environment.getExternalStorageDirectory(), "Kcal/profile.PNG");
-            sourceFile = new File(sourceFile.getAbsolutePath());
-        }
 
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
         final RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), sourceFile);
@@ -323,46 +309,13 @@ public class SignUpFragment extends Fragment {
         valid = true;
 
         if (sourceFile == null) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.profile);
-            saveImage(bitmap);
+            sourceFile = new File(Environment.getExternalStorageDirectory(), "Kcal/profile.PNG");
+            // sourceFile = new File(sourceFile.getAbsolutePath());
         } else {
             Log.d(TAG, "ok");
         }
 
         return valid;
-    }
-
-//    private void getProfileImage() {
-//        try {
-//            url = new URL(strImage);
-//            bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-//            saveImage(bitmap);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    private void saveImage(Bitmap finalBitmap) {
-
-        File myDir = new File(Environment.getExternalStorageDirectory(), "Kcal");
-        myDir.mkdirs();
-        String image_name = "profile";
-        String imageName = image_name + ".PNG";
-        File file = new File(myDir, imageName);
-        if (file.exists()) {
-            file.delete();
-        }
-
-        try {
-            FileOutputStream out = new FileOutputStream(file);
-            finalBitmap.compress(Bitmap.CompressFormat.PNG, 80, out);
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 
@@ -373,5 +326,50 @@ public class SignUpFragment extends Fragment {
         StrictMode.setThreadPolicy(policy);
     }
 
+    private class Async extends AsyncTask<String, Void, Bitmap> {
+
+        @Override
+        protected Bitmap doInBackground(String... params) {
+            try {
+                URL url = new URL(params[0]);
+                bitmap = BitmapFactory.decodeStream(new BufferedInputStream((InputStream) url.getContent()));
+            } catch (IOException e) {
+                Log.e(TAG, e.getMessage());
+            }
+            return bitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            super.onPostExecute(bitmap);
+            if (bitmap != null) {
+                saveImage(bitmap);
+            } else {
+                bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.profile);
+                saveImage(bitmap);
+            }
+
+
+        }
+    }
+
+    private void saveImage(Bitmap finalBitmap) {
+
+        File myDir = new File(Environment.getExternalStorageDirectory(), "Kcal");
+        myDir.mkdirs();
+        File file = new File(myDir, "profile.PNG");
+        if (file.exists()) {
+            file.delete();
+        }
+
+        try {
+            FileOutputStream out = new FileOutputStream(file);
+            finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

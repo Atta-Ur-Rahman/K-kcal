@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.utilities.GeneralUtills;
 

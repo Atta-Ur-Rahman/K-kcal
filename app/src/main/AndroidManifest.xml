@@ -37,6 +37,7 @@
         <uses-library android:name="com.google.android.maps" />
 
 
+
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
 
