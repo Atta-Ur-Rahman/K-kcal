@@ -3,6 +3,7 @@ package com.techease.k_kcal.ui.fragment;
 
 import android.app.WallpaperManager;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -10,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -130,10 +132,22 @@ public class SignUpFragment extends Fragment {
                                     String id = object.getString("id");
                                     URL profile_pic = null;
                                     try {
-                                        profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
+//                                        profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
+
+                                        URL url = new URL("https://graph.facebook.com/" + id + "/picture?width=160&height=160");
+                                        Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+
+                                        Toast toast = new Toast(getActivity());
+                                        ImageView view = new ImageView(getActivity());
+                                        view.setImageBitmap(bmp);
+                                        toast.setView(view);
+                                        toast.show();
+
                                         strImage = String.valueOf(profile_pic);
                                         Glide.with(getActivity()).load(strImage).into(ivFbProfile);
                                     } catch (MalformedURLException e) {
+                                        e.printStackTrace();
+                                    } catch (IOException e) {
                                         e.printStackTrace();
                                     }
 
@@ -189,6 +203,7 @@ public class SignUpFragment extends Fragment {
 
         return view;
     }
+
 
 
     private void signIn() {
@@ -257,6 +272,7 @@ public class SignUpFragment extends Fragment {
     private void socialSignupApiCall(String strSignupType) {
         if (sourceFile == null) {
             sourceFile = new File(Environment.getExternalStorageDirectory(), "Kcal/profile.PNG");
+            sourceFile = new File(sourceFile.getAbsolutePath());
         }
 
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
