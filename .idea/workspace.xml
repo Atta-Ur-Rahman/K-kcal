@@ -11,92 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aef716f-af2c-484d-bda0-177cb6b55d3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_27_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/FlushedInputStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_databinding_adapters_3_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_databinding_adapters_3_3_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_databinding_library_3_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_databinding_library_3_3_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_27_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_27_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_applinks_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_applinks_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_common_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_common_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_core_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_core_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_login_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_login_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_marketing_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_marketing_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_messenger_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_messenger_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_places_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_places_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_share_4_41_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_share_4_41_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_16_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_16_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_16_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_16_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_16_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_16_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_16_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_8_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_8_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_4_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_4_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_makeramen_roundedimageview_2_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_makeramen_roundedimageview_2_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikhaellopez_circularimageview_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikhaellopez_circularimageview_3_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__id_zelory_compressor_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__id_zelory_compressor_2_1_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllowFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AllowFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_yaaay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_yaaay.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +69,7 @@
     <session id="-1157543679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="73" />
+          <entry key="project.closed" value="74" />
           <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.1" value="41" />
           <entry key="project.open.time.10" value="1" />
@@ -157,18 +80,19 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="76" />
+          <entry key="project.opened" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
           <entry key="gradle" value="28" />
-          <entry key="java" value="624" />
+          <entry key="java" value="630" />
           <entry key="json" value="1" />
           <entry key="png" value="3" />
-          <entry key="xml" value="281" />
+          <entry key="xml" value="283" />
           <entry key="zip" value="1" />
         </counts>
       </usages-collector>
@@ -178,26 +102,26 @@
           <entry key="CLASS" value="2" />
           <entry key="Groovy" value="28" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="624" />
+          <entry key="JAVA" value="630" />
           <entry key="JSON" value="1" />
-          <entry key="XML" value="281" />
+          <entry key="XML" value="283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="127" />
           <entry key="gradle" value="62" />
-          <entry key="java" value="20949" />
-          <entry key="txt" value="379" />
-          <entry key="xml" value="5264" />
+          <entry key="java" value="21259" />
+          <entry key="txt" value="391" />
+          <entry key="xml" value="5271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="62" />
-          <entry key="JAVA" value="20949" />
-          <entry key="PLAIN_TEXT" value="506" />
-          <entry key="XML" value="5264" />
+          <entry key="JAVA" value="21259" />
+          <entry key="PLAIN_TEXT" value="518" />
+          <entry key="XML" value="5271" />
         </counts>
       </usages-collector>
     </session>
@@ -240,20 +164,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2950">
-              <caret line="141" column="81" selection-start-line="141" selection-start-column="81" selection-end-line="141" selection-end-column="81" />
-              <folding>
-                <element signature="e#4244#6626#0" expanded="true" />
-                <element signature="e#4697#5956#0" expanded="true" />
-                <element signature="e#5955#5956#0" expanded="true" />
-                <element signature="e#6625#6626#0" expanded="true" />
-                <element signature="e#7046#7188#0" expanded="true" />
-                <element signature="e#7187#7188#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="255" column="17" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -291,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResponseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_resturant.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemResturantDetailModel.java" />
@@ -340,8 +255,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/FlushedInputStream.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml" />
       </list>
     </option>
   </component>
@@ -352,7 +268,7 @@
       <facet id="app/invalid/Android-Gradle" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
     <option name="height" value="749" />
   </component>
@@ -364,23 +280,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="K-kcal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="K-kcal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="K-kcal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="K-kcal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -414,20 +315,26 @@
               <item name="techease" type="462c0819:PsiDirectoryNode" />
               <item name="k_kcal" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
             <path>
-              <item name="K-kcal" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techease" type="462c0819:PsiDirectoryNode" />
-              <item name="k_kcal" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="K-kcal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="K-kcal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="K-kcal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="K-kcal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +342,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.techease.k_kcal" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;s&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Ma&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/AndroidManifest.xml&#10;strin&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;log&#9;FILE&#9;file:///home/attaurrahman/Projects/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;sp&#9;FILE&#9;file:///home/attaurrahman/Projects/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;slpl&#9;PSI&#9;JAVA://android.support.v4.widget.SlidingPaneLayout&#10;RE&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Pro&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java&#10;Regis&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Sign&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java&#10;str&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;S&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Lo&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;stri&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;st&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java&#10;Mai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;all&#9;PSI&#9;JAVA://com.techease.k_kcal.ui.fragment.AllitemFragment&#10;Spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/activity_splash.xml&#10;about&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Veri&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;regis&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_login.xml&#10;Verif&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;GEn&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;Pr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_profile.xml&#10;Edi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;All&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java&#10;Detai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;De&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java&#10;Abou&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;col&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/colors.xml&#10;We&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_welcome.xml&#10;Det&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Ed&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;ab&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Con&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/Config.java&#10;Gen&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;D&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java" />
+    <property name="SearchEverywhereHistoryKey" value="Sign&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java&#10;Prof&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java&#10;F&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/FlushedInputStream.java&#10;Re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;s&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Ma&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/AndroidManifest.xml&#10;strin&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;log&#9;FILE&#9;file:///home/attaurrahman/Projects/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;sp&#9;FILE&#9;file:///home/attaurrahman/Projects/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;slpl&#9;PSI&#9;JAVA://android.support.v4.widget.SlidingPaneLayout&#10;RE&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Pro&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java&#10;Regis&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;str&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;S&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;Lo&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/LoginFragment.java&#10;stri&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;st&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/strings.xml&#10;Al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java&#10;Mai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java&#10;all&#9;PSI&#9;JAVA://com.techease.k_kcal.ui.fragment.AllitemFragment&#10;Spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/activities/SplashActivity.java&#10;spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/activity_splash.xml&#10;about&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Veri&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;regis&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/RegistrationFragment.java&#10;logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_login.xml&#10;Verif&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/VerifyCodeFragment.java&#10;GEn&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java&#10;Pr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_profile.xml&#10;Edi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;All&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AllitemFragment.java&#10;Detai&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;De&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/models/itemDataModels/ItemDetailModel.java&#10;Abou&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;col&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/values/colors.xml&#10;We&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/res/layout/fragment_welcome.xml&#10;Det&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/DetailFragment.java&#10;Ed&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/EditProfileFragment.java&#10;ab&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java&#10;Con&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/K-kcal/app/src/main/java/com/techease/k_kcal/utilities/Config.java" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -702,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553261178959</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="bug fixed">
+      <created>1553378604110</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1553378604111</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -715,7 +629,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="749" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2043974" />
@@ -725,8 +640,8 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.32489452" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49918568" weight="0.6694796" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32445142" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49918568" weight="0.669279" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32911393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37130803" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32911393" />
@@ -787,7 +702,8 @@
     <MESSAGE value="issue fixed in google login" />
     <MESSAGE value="facebook login need to be done" />
     <MESSAGE value="issue fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="issue fixed" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -840,20 +756,20 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_verify_code.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_layout.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/adapters/CustomSpinnerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -863,28 +779,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_you.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="248" column="43" selection-start-line="248" selection-start-column="43" selection-end-line="248" selection-end-column="43" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_item_found.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/AboutUserFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -901,36 +817,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_item_found_layout.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_filter_dialog_layout.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="330" column="17" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="330" selection-end-column="17" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="152" column="41" lean-forward="true" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/models/profileUpdateDataModel/ProfileImageDetailModel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -996,20 +912,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2025">
           <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="71" column="56" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="56" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1039,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="93" column="63" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/profile.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1059,12 +968,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/TravelFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1081,12 +990,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_yaaay.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/GeneralUtills.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1136,26 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/FlushedInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/com/techease/k_kcal/ui/fragment/SignUpFragment_ViewBinding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1170,18 +1059,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/utilities/FlushedInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/ProfileFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="85" column="52" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techease/k_kcal/ui/fragment/SignUpFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2950">
-          <caret line="141" column="81" selection-start-line="141" selection-start-column="81" selection-end-line="141" selection-end-column="81" />
-          <folding>
-            <element signature="e#4244#6626#0" expanded="true" />
-            <element signature="e#4697#5956#0" expanded="true" />
-            <element signature="e#5955#5956#0" expanded="true" />
-            <element signature="e#6625#6626#0" expanded="true" />
-            <element signature="e#7046#7188#0" expanded="true" />
-            <element signature="e#7187#7188#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="255" column="17" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.gif.GifDrawableEncoder;
+import com.facebook.login.LoginManager;
 import com.techease.k_kcal.R;
 import com.techease.k_kcal.models.profileDataModels.ProfileResponseModel;
 import com.techease.k_kcal.models.travelDataModel.TravelReponseModel;
@@ -82,6 +83,7 @@ public class ProfileFragment extends Fragment {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LoginManager.getInstance().logOut();
                 GeneralUtills.putBooleanValueInEditor(getActivity(),"isLogin",false);
                 GeneralUtills.withOutBackStackConnectFragment(getActivity(),new WelcomeFragment());
             }

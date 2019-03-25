@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
@@ -139,15 +140,8 @@ public class SignUpFragment extends Fragment {
                                     strName = object.getString("first_name") + object.getString("last_name");
                                     strEmail = object.getString("email");
                                     String id = object.getString("id");
-                                    strImage = "https://graph.facebook.com/"+id+"/picture?type=normal";
+                                    strImage = "https://graph.facebook.com/" + id + "/picture?type=normal";
                                     new Async().execute(strImage);
-
-                                    if (validate()) {
-                                        alertDialog = AlertUtils.createProgressDialog(getActivity());
-                                        alertDialog.show();
-                                        socialSignupApiCall("facebook");
-                                    }
-
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -307,10 +301,12 @@ public class SignUpFragment extends Fragment {
 
     private boolean validate() {
         valid = true;
+        sourceFile = new File(Environment.getExternalStorageDirectory(), "Kcal/profile.PNG");
 
         if (sourceFile == null) {
-            sourceFile = new File(Environment.getExternalStorageDirectory(), "Kcal/profile.PNG");
-            // sourceFile = new File(sourceFile.getAbsolutePath());
+            valid = false;
+            LoginManager.getInstance().logOut();
+            Toast.makeText(getActivity(), "please try again", Toast.LENGTH_SHORT).show();
         } else {
             Log.d(TAG, "ok");
         }
@@ -332,7 +328,7 @@ public class SignUpFragment extends Fragment {
         protected Bitmap doInBackground(String... params) {
             try {
                 URL url = new URL(params[0]);
-                bitmap = BitmapFactory.decodeStream(new BufferedInputStream((InputStream) url.getContent()));
+                bitmap = BitmapFactory.decodeStream(new FlushedInputStream((InputStream) url.getContent()));
             } catch (IOException e) {
                 Log.e(TAG, e.getMessage());
             }
@@ -369,6 +365,13 @@ public class SignUpFragment extends Fragment {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        if (validate()) {
+            alertDialog = AlertUtils.createProgressDialog(getActivity());
+            alertDialog.show();
+            socialSignupApiCall("facebook");
+
         }
     }
 
