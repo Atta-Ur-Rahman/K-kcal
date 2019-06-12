@@ -61,6 +61,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.LOCATION_SERVICE;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -94,6 +96,10 @@ public class LoginFragment extends Fragment  {
     private GoogleSignInClient mGoogleSignInClient;
     private GoogleSignInAccount account;
     private static final int RC_SIGN_IN = 200;
+
+    public static double lattitude, longitude;
+    LocationManager locationManager;
+    private static final int REQUEST_LOCATION = 100;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -320,5 +326,10 @@ public class LoginFragment extends Fragment  {
         }
         return valid;
     }
+
+
+
+
+
 
 }

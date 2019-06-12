@@ -109,7 +109,7 @@ public class EditProfileFragment extends Fragment {
         ivBackArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtills.withOutBackStackConnectFragment(getActivity(),new ProfileFragment());
+                GeneralUtills.withOutBackStackConnectFragment(getActivity(), new ProfileFragment());
             }
         });
 
@@ -272,7 +272,6 @@ public class EditProfileFragment extends Fragment {
         String filePath = cursor.getString(columnIndex);
         ivEditProfile.setImageBitmap(BitmapFactory.decodeFile(filePath));
         return cursor.getString(column_index);
-
     }
 
 
@@ -306,11 +305,10 @@ public class EditProfileFragment extends Fragment {
         return valid;
     }
 
-    private void changeProfileImage(){
-        if(sourceFile==null){
+    private void changeProfileImage() {
+        if (sourceFile == null) {
             Toast.makeText(getActivity(), "please select your profile image", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             alertDialog = AlertUtils.createProgressDialog(getActivity());
             alertDialog.show();
             apiCallUpdateProfilePicture();

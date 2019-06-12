@@ -148,7 +148,7 @@ public class WelcomeFragment extends Fragment {
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, final int id) {
-                        dialog.cancel();
+                       getActivity().finish();
                     }
                 });
         final android.app.AlertDialog alert = builder.create();

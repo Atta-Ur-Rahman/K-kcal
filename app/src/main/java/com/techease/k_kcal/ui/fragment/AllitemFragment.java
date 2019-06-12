@@ -155,7 +155,7 @@ public class AllitemFragment extends Fragment {
                     allitemAdapters.notifyDataSetChanged();
 
                 } else {
-                    Toast.makeText(getActivity(), "No Data Found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "No items found in your circle", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -163,6 +163,7 @@ public class AllitemFragment extends Fragment {
             @Override
             public void onFailure(Call<ItemResponseModel> call, Throwable t) {
                 Log.d("fail", t.getMessage());
+                Toast.makeText(getActivity(), t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
